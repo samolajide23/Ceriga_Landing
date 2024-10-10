@@ -1,0 +1,997 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 300vh;
+  font-family: 'Arial', sans-serif;
+}
+
+header {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.20);
+  backdrop-filter: blur(12.5px);
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+
+  .container {
+    color: #F00;
+    max-width: 1700px;
+    max-height: 55px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  #logo {
+    color: #fff;
+    font-family: Koulen;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 55px;
+    float: left;
+    width: 150px;
+    margin-left: 200px;
+  }
+
+  nav {
+    float: right;
+  }
+
+  .nav-links {
+    font-family: Koulen;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 55px;
+    margin-right: 60px;
+  }
+
+  .nav-links li {
+    display: inline-block;
+    margin-left: 25px;
+  }
+
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+  }
+
+  .nav-links li a:hover {
+    color: #F00;
+  }
+
+  button {
+    border-radius: 60px;
+    background: #F00;
+    border: none;
+    color: white;
+    width: 60px;
+    height: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 20px;
+    cursor: pointer;
+  }
+
+  #login {
+    color: #FFF;
+    font-family: Koulen;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.everythingYourBrandDeserves {
+  z-index: -1;
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  top: -5em;
+
+  video {
+    width: 100%;
+    height: 110vh;
+    object-fit: cover;
+    filter: brightness(50%);
+  }
+
+  h1 {
+    position: absolute;
+    top: 350px;
+    left: 220px;
+    color: #fff;
+    font-size: 80px;
+    font-family: Koulen;
+    width: 650px;
+    line-height: 90px;
+    font-weight: 400;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  p {
+    position: absolute;
+    top: 540px;
+    left: 220px;
+    color: #fff;
+    font-size: 14px;
+    font-family: Roboto;
+    width: 500px;
+    line-height: normal;
+    font-weight: 400;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  button {
+    cursor: pointer;
+    position: absolute;
+    box-shadow: 0px 0px 0px 6px rgba(255, 149, 149, 0.30);
+    border: none;
+    backdrop-filter: blur(20px);
+    top: 620px;
+    left: 230px;
+    border-radius: 60px;
+    background: #F00;
+    padding: 5px 20px;
+  }
+
+  #buttonGlow {
+    position: absolute;
+    top: 620px;
+    left: 225px;
+    width: 120px;
+    height: 60px;
+    border-radius: 19px;
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0.66) 0%, rgba(255, 0, 0, 0.00) 100%);
+    filter: blur(8.550000190734863px);
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+  }
+
+  #getstarted {
+    cursor: pointer;
+    color: #FFF;
+    font-family: Koulen;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+    text-decoration: none;
+    letter-spacing: 0.7px;
+  }
+
+
+  #redline {
+    position: absolute;
+    top: 364px;
+    left: 205px;
+    width: 2.5px;
+    height: 146px;
+    border: 1px solid #F00;
+    background-color: #F00;
+  }
+
+}
+
+.ourService {
+  color: black;
+  position: relative;
+  width: 100%;
+  height: 115vh;
+  text-align: center;
+
+  h1 {
+    margin: auto;
+    margin-top: 150px;
+    color: black;
+    font-size: 85px;
+    font-family: Koulen;
+    width: 650px;
+    font-weight: 400;
+  }
+
+  p {
+    margin: auto;
+    color: black;
+    font-size: 14px;
+    font-family: Roboto;
+    width: 520px;
+    font-weight: 400;
+  }
+
+  .img1 {
+    margin-top: 60px;
+    width: 1200px;
+    border-radius: 15px;
+    border: 1px solid #000;
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .img2 {
+    position: absolute;
+    margin-top: 305px;
+    margin-left: -1300px;
+    width: 284px;
+    height: 442px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    border: 1px solid #000;
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .img3 {
+    position: absolute;
+    margin-top: 430px;
+    margin-left: -300px;
+    width: 408px;
+    height: 336px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    border: 1px solid #000;
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.bestselling {
+  color: black;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+
+  h1 {
+    margin: auto;
+    margin-top: 150px;
+    color: black;
+    font-size: 85px;
+    font-family: Koulen;
+    width: 650px;
+    font-weight: 400;
+  }
+
+  p {
+    margin: auto;
+    color: black;
+    font-size: 14px;
+    font-family: Roboto;
+    width: 420px;
+    font-weight: 400;
+  }
+
+  /* Slideshow container */
+  .slideshow-container {
+    transition: 0.6s ease;
+    max-width: 1800px;
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+    overflow: hidden;
+    /* Ensure that only the divs fit inside the container */
+  }
+
+  .mySlides1 {
+    display: none;
+  }
+
+  .color-box {
+    width: 390px;
+    height: 500px;
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 25px;
+    background: rgba(166, 90, 90, 0.10);
+    backdrop-filter: blur(43px);
+    align-content: left;
+  }
+
+  .color-box-small {
+    width: 20px;
+    height: 500px;
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 25px;
+    background: rgba(166, 90, 90, 0.10);
+    backdrop-filter: blur(43px);
+
+  }
+
+  .textcontainer {
+    align-items: center;
+    margin-top: 10px;
+    position: absolute;
+    color: black;
+    font-size: 14px;
+    font-family: Roboto;
+    width: 120px;
+    font-weight: 400;
+    height: 200px;
+
+  }
+
+  .color-box-title {
+    background-color: #FFF;
+    color: black;
+    font-size: 13px;
+    border-radius: 35px;
+    padding: 6px 12px;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 50px;
+  }
+
+  .color-box-style {
+    background-color: black;
+    color: white;
+    font-size: 10px;
+    font-family: Roboto;
+    padding: 5px 9px;
+    font-weight: 400;
+    border-radius: 35px;
+  }
+
+  .color-box-customize {
+    position: absolute;
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    font-family: Roboto;
+    padding: 5px 9px;
+    font-weight: 400;
+    border-radius: 35px;
+    bottom: 25px;
+    right: 20px;
+  }
+
+  .sellingimg {
+    width: 300px;
+    height: 430px;
+    border-radius: 25px;
+  }
+
+  /* Next & previous buttons */
+  .prev {
+    cursor: pointer;
+    position: absolute;
+    padding: 4px 12px 4px 10px;
+    margin-top: 220px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 600px;
+    user-select: none;
+    left: 6px;
+    background-color: red;
+    width: 35px;
+    /* Adjust width as needed */
+    height: 35px;
+  }
+
+  .next {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    padding: 4px 12px 4px 10px;
+    margin-top: 220px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 600px;
+    user-select: none;
+    right: 25px;
+    background-color: red;
+    width: 35px;
+    /* Adjust width as needed */
+    height: 35px;
+  }
+
+  /* On hover, add a grey background color */
+  .prev:hover, .next:hover {
+    background-color: rgb(255, 46, 46);
+    color: white;
+  }
+}
+
+.aboutCeriga {
+  width: 95vw;
+  height: 82vh;
+
+  .aboutImg {
+    width: 60%;
+    height: 600px;
+    flex-shrink: 0;
+    border-radius: 0px 275.5px 275.5px 0px;
+    float: left;
+  }
+
+  #aboutContainer {
+    width: 35%;
+    height: 550px;
+    float: right;
+  }
+
+  h1 {
+    color: black;
+    text-align: right;
+    font-size: 130px;
+    font-family: Koulen;
+    width: 314px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120px;
+    margin-top: 50px;
+    margin-left: 250px;
+  }
+
+  p {
+    color: black;
+    font-size: 18px;
+    font-family: Roboto;
+    width: 515px;
+    line-height: 28px;
+    font-weight: 400;
+    margin-top: 20px;
+    text-align: right;
+    margin-left: 80px;
+  }
+
+  button {
+    margin-top: 30px;
+    margin-left: 470px;
+    width: 120px;
+    height: 40px;
+    background: #F00;
+    border-radius: 60px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 0px 0px 6px rgba(255, 149, 149, 0.30);
+    backdrop-filter: blur(20px);
+  }
+
+  #buttonGlow {
+    position: relative;
+    top: -40px;
+    left: 475px;
+    width: 120px;
+    height: 80px;
+    border-radius: 19px;
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0.66) 0%, rgba(255, 0, 0, 0.00) 100%);
+    filter: blur(8.550000190734863px);
+    backdrop-filter: blur(20px);
+    cursor: pointer;
+    z-index: -1;
+  }
+
+  #getstarted {
+    cursor: pointer;
+    color: #FFF;
+    font-family: Koulen;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 250;
+    line-height: normal;
+    text-decoration: none;
+    letter-spacing: 0.7px;
+  }
+}
+
+.gallery {
+  width: 100%;
+  height: 140vh;
+  background-color: #000;
+  color: #FFF;
+
+  h1 {
+    position: relative;
+    text-align: right;
+    font-size: 130px;
+    font-family: Koulen;
+    width: 314px;
+    font-style: normal;
+    font-weight: 400;
+    top: 50px;
+    margin-left: 90px;
+  }
+
+  p {
+    font-size: 18px;
+    font-family: Roboto;
+    width: 615px;
+    line-height: 28px;
+    font-weight: 400;
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 90px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #FFF;
+  }
+
+  img {
+    width: 550px;
+    height: 700px;
+    margin-right: -40px;
+    margin-left: 70px;
+    margin-top: 100px;
+    float: left;
+    object-fit: cover;
+    filter: brightness(50%);
+  }
+
+  h2 {
+    font-size: 22px;
+    font-family: Roboto;
+    margin-left: 75px;
+    width: 110px;
+    font-style: normal;
+    font-weight: 400;
+    top: 40px;
+    position: relative;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #FFF;
+  }
+}
+
+.solveYourProblems {
+  width: 100%;
+  height: 75vh;
+  background-color: #000;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  h1 {
+    text-align: center;
+    font-size: 130px;
+    font-family: Koulen;
+    width: 814px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120px;
+    margin-top: 200px;
+  }
+
+  p {
+    font-size: 12px;
+    font-family: Roboto;
+    width: 365px;
+    line-height: 28px;
+    font-weight: 400;
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  .button-container {
+    display: flex;
+    /* Enables flexbox for buttons */
+    gap: 130px;
+    /* Adds space between buttons */
+    margin-top: 50px;
+  }
+
+  button {
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+    background: #F00;
+    border-radius: 60px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 0px 0px 6px rgba(255, 149, 149, 0.30);
+    backdrop-filter: blur(20px);
+  }
+
+  .contactusbutton {
+    background: white;
+    color: #000;
+    box-shadow: 0px 0px 0px 6px rgba(255, 248, 248, 0.3);
+  }
+
+  .contactusbutton a {
+    color: #000;
+  }
+
+  #buttonGlow1 {
+    position: relative;
+    top: -40px;
+    left: 475px;
+    width: 120px;
+    height: 80px;
+    border-radius: 19px;
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0.66) 0%, rgba(255, 0, 0, 0.00) 100%);
+    filter: blur(8.550000190734863px);
+    backdrop-filter: blur(20px);
+    cursor: pointer;
+    z-index: -1;
+  }
+
+  button a {
+    cursor: pointer;
+    color: #FFF;
+    font-family: Koulen;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 250;
+    line-height: normal;
+    text-decoration: none;
+    letter-spacing: 0.7px;
+  }
+}
+
+.aboutCeriga1 {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  top: -5em;
+  background-color: #000;
+
+  h1 {
+    position: relative;
+    top: 350px;
+    left: 180px;
+    color: #fff;
+    font-size: 130px;
+    font-family: Koulen;
+    width: 650px;
+    line-height: 110px;
+    font-weight: 400;
+  }
+
+  p {
+    position: absolute;
+    top: 320px;
+    left: 790px;
+    color: #fff;
+    font-size: 46px;
+    font-family: Roboto;
+    width: 970px;
+    line-height: normal;
+    font-weight: 400;
+  }
+
+  .eclipse {
+    position: absolute;
+    top: 180px;
+    left: -290px;
+  }
+
+}
+
+.ourStory {
+  max-width: 100%;
+  position: relative;
+  height: 100vh;
+  background-color: #FFF;
+
+  h1 {
+    position: relative;
+    top: 350px;
+    left: 180px;
+    font-size: 200px;
+    font-family: Koulen;
+    width: 650px;
+    line-height: 170px;
+    font-weight: 400;
+  }
+
+  p {
+    position: absolute;
+    top: 170px;
+    left: 715px;
+    font-size: 20px;
+    font-family: Roboto;
+    width: 467px;
+    line-height: normal;
+    font-weight: 400;
+  }
+
+  .redLine {
+    position: absolute;
+    top: 170px;
+    left: 692px;
+    width: 2.5px;
+    height: 214px;
+    border: 1px solid #F00;
+    background-color: #F00;
+  }
+
+  .eclipse {
+    position: absolute;
+    top: 180px;
+    right: -190px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    border: 20px dashed #F00;
+  }
+}
+
+.ourPromiseToYou {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+
+  .container {
+    position: relative;
+    border-radius: 70px;
+    border: 2px solid #C6C6C6;
+    background: rgba(233, 233, 233, 0.50);
+    backdrop-filter: blur(12.5px);
+    width: 980px;
+    height: 480px;
+    top: 250px;
+    left: 150px;
+  }
+
+  h1 {
+    position: absolute;
+    top: 250px;
+    left: 1250px;
+    font-size: 96px;
+    font-family: Koulen;
+    width: 330px;
+    line-height: 100px;
+    font-weight: 400;
+  }
+
+  p {
+    position: absolute;
+    top: 570px;
+    left: 1273px;
+    font-size: 20px;
+    font-family: Roboto;
+    width: 467px;
+    line-height: normal;
+    font-weight: 400;
+  }
+
+  .redLine {
+    position: absolute;
+    top: 572px;
+    left: 1260px;
+    width: 3px;
+    height: 70px;
+    border: 1px solid #F00;
+    background-color: #F00;
+  }
+
+}
+
+.ourTeam {
+  width: 100%;
+  position: relative;
+  height: 120vh;
+  margin: 0 auto;
+
+
+  h1 {
+    text-align: center;
+    position: relative;
+    top: 200px;
+    font-size: 78px;
+    font-family: Koulen;
+    width: 530px;
+    line-height: 100px;
+    font-weight: 400;
+    margin: 0 auto;
+  }
+
+  .container {
+    position: relative;
+    float: left;
+    width: 477px;
+    height: 900px;
+    left: 190px;
+    margin-top: 250px;
+    margin-right: 47px;
+  }
+
+  img {
+    width: 477px;
+    height: 605px;
+    border-radius: 10px;
+    border: #000 solid 1px;
+  }
+
+  h2 {
+    margin-top: 20px;
+    color: #000;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  h3 {
+    color: #F00;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    /* 143.75% */
+  }
+
+}
+
+.smallGallery {
+  width: 100%;
+  height: 140vh;
+
+  .row {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    left: 0;
+    right: 0;
+    margin-top: 200px;
+  }
+
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    margin-left: 0px;
+  }
+
+  .column2 {
+    flex: 50%;
+    max-width: 50%;
+    margin-left: 0px;
+  }
+
+  .column2 img {
+    vertical-align: middle;
+    width: 100%;
+    border: #000 solid 1px;
+  }
+
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.ourCoreValues {
+
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto;
+
+  h1 {
+    text-align: center;
+    position: relative;
+    top: 200px;
+    font-size: 78px;
+    font-family: Koulen;
+    width: 530px;
+    line-height: 100px;
+    font-weight: 400;
+    margin: 0 auto;
+  }
+}
+
+footer {
+  background-color: #000;
+  /* Dark background for footer */
+  color: #fff;
+  /* White text color */
+  text-align: left;
+  /* Align text to the left */
+    font-family: Roboto;
+  /* Set font */
+  bottom: 100px;
+  /* Stick to the bottom */
+  padding-top: 150px;
+  margin-bottom: 200px;
+
+
+  .footer-container {
+    border-top: 1px solid #FFFFFF;
+    /* White top border for separation */
+    max-width: 1400px;
+    /* Max width of footer */
+    margin: 0 auto;
+    /* Center align footer */
+    display: flex;
+    /* Use flexbox for layout */
+    justify-content: space-between;
+    /* Space out sections evenly */
+    flex-wrap: wrap;
+    /* Allow wrapping for smaller screens */
+    padding: 20px;
+    /* Padding around the content */
+    border-bottom: 1px solid #f00;
+    padding-top: 90px;
+    padding-bottom: 100px;
+
+  }
+
+  .footer-section {
+    width: 22%;
+    margin-bottom: 20px;
+  }
+
+  .logo-section h2 {
+    font-size: 70px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-family: Koulen;
+  }
+
+  .logo-section p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .social-icons img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer-section h3 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-section ul li a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+
+  .footer-section ul li a:hover {
+    color: #f00;
+  }
+
+}
