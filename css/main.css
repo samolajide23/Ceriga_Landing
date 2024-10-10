@@ -772,13 +772,17 @@ header {
     background-color: #F00;
   }
 
+  .eclipse {
+    position: absolute;
+    top: -100px;
+    left: -500px;
+  }
 }
 
 .ourTeam {
   width: 100%;
   position: relative;
   height: 120vh;
-  margin: 0 auto;
 
 
   h1 {
@@ -910,7 +914,7 @@ footer {
   /* White text color */
   text-align: left;
   /* Align text to the left */
-    font-family: Roboto;
+  font-family: Roboto;
   /* Set font */
   bottom: 100px;
   /* Stick to the bottom */
