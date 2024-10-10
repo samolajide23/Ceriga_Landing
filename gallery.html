@@ -1,132 +1,81 @@
-<!DOCTYPE html>
-<html>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+            });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            });
+    });
+</script>
 
-<head>
-    <link href="https://fonts.googleapis.com/css?family=Koulen&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-    <link href="Gallery css.css" rel="stylesheet" type="text/css" />
-    <title>Ceriga</title>
-</head>
+<div id="header-placeholder"></div>
 
-<body>
-    <header>
-        <div class="container">
-            <div id="logo">CERIGA<a style="color: red;">.</a></div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT US</a></li>
-                    <li><a href="#">BLOGS</a></li>
-                    <li><a href="#">GALLERY</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                    <li><button><a id="login">LOGIN</a></button></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="first-paragraph">
-        Welcome to our world of <span class="highlight-red">vibrant</span> collections and <span
-            class="highlight-red">memories</span>, where every piece tells a <span class="highlight-red">story</span>
-        and captures a moment in time. Explore, enjoy, and be <span class="highlight-red">inspired</span>.
+<section class="first-paragraph">
+    Welcome to our world of <span class="highlight-red">vibrant</span> collections and <span
+        class="highlight-red">memories</span>, where every piece tells a <span class="highlight-red">story</span>
+    and captures a moment in time. Explore, enjoy, and be <span class="highlight-red">inspired</span>.
 
 
 
 
-        <div class="image1">
-            <img src="image/pexels-taha-balta-3031128-13159721.jpg" alt="" />
-        </div>
+    <div class="image1">
+        <img src="image/pexels-taha-balta-3031128-13159721.jpg" alt="" />
+    </div>
 
 
-        <div class="image2">
-            <img src="image/pexels-cottonbro-4614227.jpg" alt="" />
-        </div>
+    <div class="image2">
+        <img src="image/pexels-cottonbro-4614227.jpg" alt="" />
+    </div>
 
-        <div class="image3">
-            <img src="image/pexels-theplanetspeaks-9314012.jpg" alt="" />
-        </div>
+    <div class="image3">
+        <img src="image/pexels-theplanetspeaks-9314012.jpg" alt="" />
+    </div>
 
-        <div class="image4">
-            <img src="image/pexels-tima-miroshnichenko-6765002.jpg" alt="" />
-        </div>
+    <div class="image4">
+        <img src="image/pexels-tima-miroshnichenko-6765002.jpg" alt="" />
+    </div>
 
-        <div class="image5">
-            <img src="image/pexels-vlada-karpovich-4452511.jpg" alt="" />
-        </div>
+    <div class="image5">
+        <img src="image/pexels-vlada-karpovich-4452511.jpg" alt="" />
+    </div>
 
-        <div class="image6">
-            <img src="image/pexels-seyfidurmaz-6717035.jpg" alt="" />
-        </div>
-
-
-        <div class="image7">
-            <img src="image/pexels-hson-27893064.jpg" alt="" />
-        </div>
+    <div class="image6">
+        <img src="image/pexels-seyfidurmaz-6717035.jpg" alt="" />
+    </div>
 
 
-        <div class="image8">
-            <img src="image/pexels-nguyendesigner-5271312.jpg" alt="" />
-        </div>
-
-        <div class="image9">
-            <img src="image/pexels-88107820-9983579.jpg" alt="" />
-        </div>
-
-        <div class="image10">
-            <img src="image/pexels-ahmed-ben-ashur-2155317-10960792.jpg" alt="" />
-        </div>
-
-        <div class="image11">
-            <img src="image/pexels-mandiri-abadi-396768996-15016522.jpg" alt="" />
-        </div>
-
-        <div class="image12">
-            <img src="image/pexels-michaela-st-3448542-20578931.jpg" alt="" />
-        </div>
-
-    </section>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section logo-section">
-                <h2>CERIGA<a style="color: red;">.</a></h2>
-                <p>Ceriga simplifies your journey as a clothing brand by offering a platform that streamlines your
-                    entire
-                    ordering process.</p>
-                <div class="social-icons">
-                    <a href="#"><img src="image/logos.png" alt="Twitter"></a>
-                    <a href="#"><img src="image/facebook (1).png" alt="Facebook"></a>
-                    <a href="#"><img src="image/instagram (1).png" alt="Instagram"></a>
-                </div>
-            </div>
+    <div class="image7">
+        <img src="image/pexels-hson-27893064.jpg" alt="" />
+    </div>
 
 
-            <div class="footer-section">
-                <h3>NEED HELP?</h3>
-                <ul>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Cookie Settings</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
+    <div class="image8">
+        <img src="image/pexels-nguyendesigner-5271312.jpg" alt="" />
+    </div>
 
-            <div class="footer-section">
-                <h3>MORE</h3>
-                <ul>
-                    <li><a href="#">Educators</a></li>
-                    <li><a href="#">Channel</a></li>
-                    <li><a href="#">Our Team</a></li>
-                    <li><a href="#">Mobile App</a></li>
-                </ul>
-            </div>
+    <div class="image9">
+        <img src="image/pexels-88107820-9983579.jpg" alt="" />
+    </div>
 
-            <div class="footer-section">
-                <h3>QUICK LINKS</h3>
-                <ul>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <div class="image10">
+        <img src="image/pexels-ahmed-ben-ashur-2155317-10960792.jpg" alt="" />
+    </div>
+
+    <div class="image11">
+        <img src="image/pexels-mandiri-abadi-396768996-15016522.jpg" alt="" />
+    </div>
+
+    <div class="image12">
+        <img src="image/pexels-michaela-st-3448542-20578931.jpg" alt="" />
+    </div>
+
+</section>
+
+<div id="footer-placeholder"></div>

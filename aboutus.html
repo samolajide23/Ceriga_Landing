@@ -1,15 +1,37 @@
-<?php include 'header.php'; ?>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+            });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            });
+    });
+</script>
+
+<div id="header-placeholder"></div>
 <section class="aboutCeriga1">
     <svg width="600" height="600" class="eclipse">
         <circle cx="300" cy="300" r="290" stroke="#F00" stroke-width="20" fill="none" stroke-dasharray="45" />
     </svg>
     <h1>ABOUT CERIGA<a style="color: red;">.</a></h1>
-    <p>At Ceriga, we’re a dynamic team of young entrepreneurs driven by a shared vision to <a style="color: red;">revolutionize</a> the fashion industry. Recognizing a gap in the market, we set out to bridge it with <a style="color: red;">creativity</a> and <a style="color: red;">innovation</a>.</p>
+    <p>At Ceriga, we’re a dynamic team of young entrepreneurs driven by a shared vision to <a
+            style="color: red;">revolutionize</a> the fashion industry. Recognizing a gap in the market, we set out to
+        bridge it with <a style="color: red;">creativity</a> and <a style="color: red;">innovation</a>.</p>
 </section>
 
 <section class="ourStory">
     <h1>OUR STORY<a style="color: red;">.</a></h1>
-    <p>It all started in the summer of 2023 when the three of us decided to take on the fashion industry, we seen first hand the problems clothing brands were facing like miscommunication with manufacturers, unfair prices, long processes and many more problems. we are passionate about the fashion industry and we're determined to make a real impact. Join us on this journey as we transform the industry together.
+    <p>It all started in the summer of 2023 when the three of us decided to take on the fashion industry, we seen first
+        hand the problems clothing brands were facing like miscommunication with manufacturers, unfair prices, long
+        processes and many more problems. we are passionate about the fashion industry and we're determined to make a
+        real impact. Join us on this journey as we transform the industry together.
     </p>
     <div class="redLine"></div>
     <div class="eclipdse"></div>
@@ -20,7 +42,8 @@
 
     </div>
     <h1>OUR PROMISE TO YOU<a style="color: red;">.</a></h1>
-    <p>At Ceriga, we are dedicated to ensuring your experience with us is always positive and reliable. Here is our commitment to you.</p>
+    <p>At Ceriga, we are dedicated to ensuring your experience with us is always positive and reliable. Here is our
+        commitment to you.</p>
     <div class="redLine"></div>
 </section>
 
@@ -63,5 +86,4 @@
     <h1>OUR CORE VALUES<a style="color: red;">.</a></h1>
 </section>
 
-
-<?php include 'footer.php'; ?>
+<div id="footer-placeholder"></div>
