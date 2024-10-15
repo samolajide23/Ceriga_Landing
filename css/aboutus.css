@@ -178,7 +178,6 @@
         width: 100%;
         height: 35vw;
         border-radius: 10px;
-        border: #000 solid 1px;
     }
 
     h2 {
@@ -260,7 +259,7 @@
 .ourCoreValues {
     width: 100%;
     position: relative;
-    height: 200vh;
+    height: 190vh;
     margin: 0 auto;
 
     h1 {
@@ -277,7 +276,7 @@
     .container {
         position: relative;
         float: left;
-        margin-left: 6%;
+        margin-left: 7%;
         margin-right: 0%;
         width: 42%;
         margin-top: 28vw;
@@ -288,21 +287,12 @@
     }
 
     .container:nth-child(odd) {
+        text-align: right;
         float: right;
         align-items: flex-end;
         margin-left: 0%;
-        margin-right: 5%;
+        margin-right: 7%;
         width: 42%;
-
-        p {
-            text-align: right;
-            float: right;
-        }
-
-        h2 {
-            text-align: right;
-            float: right;
-        }
     }
 
 
@@ -323,7 +313,7 @@
 
     img {
         position: absolute;
-        width: 90%;
+        width: 80%;
         left: 0;
         right: 0;
         margin: 200px auto;
@@ -383,7 +373,10 @@
     .contactusbutton {
         background: white;
         color: #000;
-        box-shadow: 0px 0px 0px 6px rgba(255, 248, 248, 0.3);
+        border: none;
+        cursor: pointer;
+        box-shadow: 0px 0px 0px 6px rgba(171, 171, 171, 0.3);
+        backdrop-filter: blur(20px);
     }
 
     .contactusbutton a {
