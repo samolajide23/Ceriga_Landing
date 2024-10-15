@@ -5,8 +5,7 @@
 }
 
 body {
-  height: 300vh;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
 }
 
@@ -647,7 +646,8 @@ header {
 }
 
 
-.aboutCeriga1 {
+/* About Us */
+.aboutUsCeriga {
   width: 100%;
   position: relative;
   height: 97vh;
@@ -687,64 +687,6 @@ header {
 
 }
 
-
-/* Media Queries for Small Screens */
-@media (max-width: 768px) {
-  .aboutCeriga1 {
-    h1 {
-      font-size: 1vw;
-      /* Smaller font size for small screens */
-      left: 5vw;
-      /* Reduce left margin */
-      top: 30vh;
-      /* Adjust top positioning */
-    }
-
-    p {
-      font-size: 1vw;
-      /* Adjust font size for readability */
-      left: 5vw;
-      /* Center align text */
-      width: 80vw;
-      /* Wider text box for small screens */
-      top: 50vh;
-      /* Adjust top position */
-    }
-
-    .eclipse {
-      left: -30vw;
-      /* Adjust positioning for eclipse */
-      top: 10vh;
-    }
-  }
-}
-
-/* Media Queries for very small screens (mobile phones) */
-@media (max-width: 480px) {
-  .aboutCeriga1 {
-    h1 {
-      font-size: 10vw;
-      /* Font size adjusts for mobile */
-      left: 5vw;
-      top: 25vh;
-    }
-
-    p {
-      font-size: 4vw;
-      /* Larger for readability */
-      left: 5vw;
-      top: 50vh;
-      /* Space out text properly */
-      width: 90vw;
-    }
-
-    .eclipse {
-      display: none;
-      /* Optionally hide the eclipse on very small screens */
-    }
-  }
-}
-
 .ourStory {
   max-width: 100vw;
   position: relative;
@@ -754,7 +696,7 @@ header {
   h1 {
     position: relative;
     top: 350px;
-    left: 180px;
+    left: 10%;
     font-size: 200px;
     font-family: Koulen;
     width: 650px;
@@ -765,7 +707,7 @@ header {
   p {
     position: absolute;
     top: 170px;
-    left: 715px;
+    left: 38%;
     font-size: 20px;
     font-family: Roboto;
     width: 467px;
@@ -776,7 +718,7 @@ header {
   .redLine {
     position: absolute;
     top: 170px;
-    left: 692px;
+    left: 37%;
     width: 2.5px;
     height: 214px;
     border: 1px solid #F00;
@@ -802,16 +744,16 @@ header {
     border: 2px solid #C6C6C6;
     background: rgba(233, 233, 233, 0.50);
     backdrop-filter: blur(12.5px);
-    width: 980px;
+    width: 54%;
     height: 480px;
     top: 250px;
-    left: 150px;
+    left: 10%;
   }
 
   h1 {
     position: absolute;
     top: 250px;
-    left: 1250px;
+    left: 67%;
     font-size: 96px;
     font-family: Koulen;
     width: 330px;
@@ -822,10 +764,10 @@ header {
   p {
     position: absolute;
     top: 570px;
-    left: 1273px;
+    left: 68%;
     font-size: 20px;
     font-family: Roboto;
-    width: 467px;
+    width: 25%;
     line-height: normal;
     font-weight: 400;
   }
@@ -833,7 +775,7 @@ header {
   .redLine {
     position: absolute;
     top: 572px;
-    left: 1260px;
+    left: 67%;
     width: 3px;
     height: 70px;
     border: 1px solid #F00;
@@ -843,13 +785,7 @@ header {
   .eclipse {
     position: absolute;
     top: -100px;
-    left: -500px;
-  }
-
-  .eclipse cirlce {
-    position: absolute;
-    top: -100px;
-    left: -500px;
+    left: -30%;
   }
 }
 
@@ -871,18 +807,23 @@ header {
     margin: 0 auto;
   }
 
+  .img-container {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
   .container {
     position: relative;
-    float: left;
-    width: 477px;
+    width: 28%;
     height: 900px;
-    left: 190px;
     margin-top: 250px;
-    margin-right: 45px;
   }
 
   img {
-    width: 477px;
+    width: 100%;
     height: 605px;
     border-radius: 10px;
     border: #000 solid 1px;
@@ -921,6 +862,7 @@ header {
     left: 0;
     right: 0;
     margin: 100px auto;
+    gap: 1.5%;
   }
 
   /* Create four equal columns that sits next to each other */
@@ -937,8 +879,6 @@ header {
   .column2 {
     flex: 723px;
     max-width: 723px;
-    margin-left: 20px;
-    margin-right: 20px;
   }
 
   .column2 img {
@@ -1112,50 +1052,33 @@ header {
 
 footer {
   background-color: #000;
-  /* Dark background for footer */
   color: #fff;
-  /* White text color */
-  text-align: left;
-  /* Align text to the left */
-  font-family: Roboto;
-  bottom: 0;
-  /* Stick to the bottom */
-  padding: 50px 0;
-  /* Add padding for spacing */
-  margin-bottom: 200px;
+  padding: 50px 5%;
+  font-family: Roboto, sans-serif;
 
 
   .footer-container {
-    border-top: 1px solid #FFFFFF;
-    /* White top border for separation */
-    max-width: 80%;
-    /* Max width of footer */
+    max-width: 1200px;
     margin: 0 auto;
-    /* Center align footer */
     display: flex;
-    /* Use flexbox for layout */
     justify-content: space-between;
-    /* Space out sections evenly */
     flex-wrap: wrap;
-    /* Allow wrapping for smaller screens */
-    padding: 20px;
-    /* Padding around the content */
+    padding: 20px 0;
+    border-top: 1px solid #FFFFFF;
     border-bottom: 1px solid #f00;
-    padding-top: 3%;
-    padding-bottom: 3%;
 
   }
 
   .footer-section {
-    width: 22%;
+    width: 100%;
     margin-bottom: 20px;
   }
 
   .logo-section h2 {
-    font-size: 70px;
-    color: #fff;
+    font-size: 5vw;
+    font-family: Koulen, sans-serif;
     margin-bottom: 15px;
-    font-family: Koulen;
+
   }
 
   .logo-section p {
@@ -1173,18 +1096,15 @@ footer {
   .social-icons img {
     width: 20px;
     height: 20px;
-    margin-right: 10px;
   }
 
   .footer-section h3 {
     font-size: 18px;
-    color: #fff;
     margin-bottom: 15px;
   }
 
   .footer-section ul {
     list-style-type: none;
-    padding: 0;
   }
 
   .footer-section ul li {
@@ -1204,17 +1124,141 @@ footer {
 
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .footer-section {
+
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 50px 5%;
+  font-family: Roboto, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #f00;
+}
+
+.footer-section {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.logo-section h2 {
+  font-size: 5vw;
+  font-family: Koulen, sans-serif;
+  margin-bottom: 15px;
+}
+
+.logo-section p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #f00;
+}
+
+@media (min-width: 768px) {
+  .everythingYourBrandDeserves h1 {
+    font-size: 60px;
+    left: 10%;
     width: 80%;
-    /* Adjust width for smaller screens */
+  }
+
+  .everythingYourBrandDeserves p {
+    left: 10%;
+    width: 60%;
+  }
+
+  .everythingYourBrandDeserves button {
+    left: 10%;
+  }
+
+  .ourService h1, .bestselling h1, .aboutCeriga h1, .gallery h1, .craftSomethingSpecial h1 {
+    font-size: 60px;
+  }
+
+  .color-box {
+    width: 48%;
+    margin: 1%;
+  }
+
+  .aboutImg {
+    width: 50%;
+  }
+
+  #aboutContainer {
+    width: 45%;
+    padding-left: 5%;
+  }
+
+  .footer-section {
+    width: 48%;
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 1024px) {
+  .color-box {
+    width: 23%;
+    margin: 1%;
+  }
+
   .footer-section {
-    width: 80%;
-    /* Stack sections on mobile */
+    width: 22%;
+  }
+}
+
+@media (max-width: 767px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 5%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
   }
 }
