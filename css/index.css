@@ -81,13 +81,13 @@
 }
 
 .ourService {
-    padding: 200px 5%;
+    padding: 100px 5%;
     text-align: center;
 
     h1 {
         font-size: calc(2rem + 3vw);
         font-family: Koulen, sans-serif;
-        margin-bottom: 20px;
+        margin-bottom: -20px;
     }
 
     p {
@@ -126,13 +126,13 @@
 }
 
 .bestselling {
-    padding: 100px 5%;
+    padding: 300px 5%;
     text-align: center;
 
     h1 {
         font-size: calc(2rem + 3vw);
         font-family: Koulen, sans-serif;
-        margin-bottom: 10px;
+        margin-bottom: -20px;
     }
 
     p {
@@ -148,7 +148,7 @@
         max-width: 96.7%;
         position: relative;
         margin: auto;
-        margin-top: 100px;
+        margin-top: 60px;
         overflow: hidden;
         /* Ensure that only the divs fit inside the container */
     }
@@ -283,78 +283,58 @@
 
 
 .aboutCeriga {
-    width: 95%;
-    height: 82vh;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: -100px 0% 0% 0%;
 
     .aboutImg {
-        width: 60%;
-        height: 80%;
-        flex-shrink: 0;
-        border-radius: 0px 275.5px 275.5px 0px;
-        float: left;
+        width: 100%;
+        max-width: 60%;
+        border-radius: 0 2275.5px 2275.5px 0;
+        margin-bottom: 20px;
     }
 
     #aboutContainer {
-        width: 35%;
-        height: 80%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: right;
+        padding-left: 0;
         float: right;
+        margin-right: 5%;
+        width: 35%;
+        padding-left: 0;
     }
 
     h1 {
-        color: black;
-        text-align: right;
-        font-size: 130px;
-        font-family: Koulen;
-        width: 314px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 90%;
-        margin-top: 50px;
-        margin-left: 38%;
+        font-size: calc(2rem + 4vw);
+        font-family: Koulen, sans-serif;
+        line-height: 1;
+        margin-bottom: 10px;
+        width: 41%;
     }
-
 
     p {
-        color: black;
-        font-size: 18px;
-        font-family: Roboto;
-        width: 515px;
-        line-height: 28px;
-        font-weight: 400;
-        margin-top: 20px;
-        text-align: right;
-        margin-left: 13%;
-    }
-
-    @media (max-width: 1440px) {
-        h1 {
-            margin-left: 45%;
-            width: 205px;
-            font-size: 85px;
-        }
-
-        p {
-            width: 400px;
-            margin-left: 5%;
-
-        }
+        font-size: calc(1rem + 0.01vw);
+        width: 80%;
+        line-height: 1.6;
+        margin-bottom: 30px;
     }
 
     button {
-        margin-top: 30px;
-        margin-left: 76%;
-        width: 120px;
-        height: 40px;
         background: #F00;
         border-radius: 60px;
-        cursor: pointer;
         border: none;
-        box-shadow: 0px 0px 0px 6px rgba(255, 149, 149, 0.30);
-        backdrop-filter: blur(20px);
+        padding: 10px 20px;
+        cursor: pointer;
     }
 
     #buttonGlow {
-        position: relative;
+        position: absolute;
         top: -40px;
         left: 76%;
         width: 120px;
@@ -381,117 +361,108 @@
 }
 
 .gallery {
-    width: 100%;
-    height: 140vh;
     background-color: #000;
     color: #FFF;
+    margin-top: 150px;
+    padding: 100px 10%;
 
     h1 {
-        position: relative;
-        text-align: right;
-        font-size: 130px;
-        font-family: Koulen;
-        width: 314px;
-        font-style: normal;
-        font-weight: 400;
-        top: 50px;
-        margin-left: 90px;
+        font-size: calc(2rem + 3vw);
+        font-family: Koulen, sans-serif;
+        margin-bottom: 10px;
     }
 
     p {
-        font-size: 18px;
-        font-family: Roboto;
-        width: 615px;
-        line-height: 28px;
-        font-weight: 400;
-        margin-top: 20px;
-        text-align: left;
-        margin-left: 90px;
+        font-size: calc(1rem + 0.1vw);
+        max-width: 700px;
         padding-bottom: 20px;
         border-bottom: 1px solid #FFF;
     }
 
+    .gallery-images {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
     img {
-        width: 30%;
-        height: 54%;
-        margin-right: -3%;
-        margin-left: 4%;
-        margin-top: 100px;
-        float: left;
-        object-fit: cover;
+        width: 100%;
+        max-width: 32%;
+        height: 600px;
+        margin: 30px 1% -20px 0px;
         filter: brightness(50%);
     }
 
     h2 {
-        font-size: 22px;
-        font-family: Roboto;
-        margin-left: 75px;
+        font-size: calc(1rem + 0.1vw);
         width: 110px;
-        font-style: normal;
-        font-weight: 400;
-        top: 40px;
         position: relative;
         padding-bottom: 5px;
         border-bottom: 1px solid #FFF;
+        margin-top: 40px;
+        cursor: pointer;
     }
 }
 
 .craftSomethingSpecial {
-    width: 100%;
-    height: 95vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     background-color: #000;
     color: white;
+    padding: 200px 5%;
+    text-align: center;
 
     h1 {
-        text-align: center;
-        font-size: 90px;
         font-family: Koulen;
-        width: 914px;
         font-style: normal;
-        font-weight: 400;
-        line-height: 120px;
-        margin-top: 200px;
+        font-size: calc(2rem + 3vw);
+        font-family: Koulen, sans-serif;
+        line-height: 1.2;
+        max-width: 60%;
+        margin: 0 auto 40px;
+        text-align: center;
     }
 
     p {
-        font-size: 12px;
+        font-size: calc(0.8rem + 0.1vw);
         font-family: Roboto;
-        width: 365px;
-        line-height: 28px;
-        font-weight: 400;
-        margin-top: 60px;
+        width: 40%;
         text-align: center;
+        margin: 60px auto 40px;
     }
 
     .button-container {
         display: flex;
-        /* Enables flexbox for buttons */
-        gap: 130px;
-        /* Adds space between buttons */
-        margin-top: 50px;
+        justify-content: center;
+        gap: 2%;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
     }
 
     button {
-        margin-top: 20px;
-        width: 150px;
-        height: 50px;
-        background: #F00;
-        border-radius: 60px;
-        cursor: pointer;
-        border: none;
         box-shadow: 0px 0px 0px 6px rgba(255, 149, 149, 0.30);
         backdrop-filter: blur(20px);
+        width: 150px;
+        height: 50px;
+        border-radius: 60px;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:first-child {
+        background: #F00;
     }
 
     .contactusbutton {
         background: white;
         color: #000;
         box-shadow: 0px 0px 0px 6px rgba(255, 248, 248, 0.3);
+    }
+
+    button a {
+        cursor: pointer;
+        color: #FFF;
+        font-family: Koulen;
+        font-size: 20px;
+        text-decoration: none;
     }
 
     .contactusbutton a {
@@ -510,17 +481,5 @@
         backdrop-filter: blur(20px);
         cursor: pointer;
         z-index: -1;
-    }
-
-    button a {
-        cursor: pointer;
-        color: #FFF;
-        font-family: Koulen;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 250;
-        line-height: normal;
-        text-decoration: none;
-        letter-spacing: 0.7px;
     }
 }
