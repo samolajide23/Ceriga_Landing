@@ -136,6 +136,32 @@
         padding-top: 20px;
     }
 
+    .subContainer {
+        /* Example background for visibility */
+        padding: 40px;
+        /* Optional border */
+        /* Optional shadow */
+        width: 100%;
+        /* Make each container span full available width */
+        max-width: 400px;
+        /* Max width for responsiveness */
+    }
+
+    h2 {
+        font-family: Koulen;
+        font-size: calc(2rem + 0.2vw);
+    }
+
+    .subText {
+        font-size: calc(0.1rem + 1vw);
+        line-height: normal;
+        font-weight: 400;
+        border-top: 2px solid rgb(0, 0, 0);
+        padding-top: 20px;
+    }
+
+
+
     h1 {
         position: absolute;
         top: 250px;
