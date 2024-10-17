@@ -97,10 +97,46 @@
         background: rgba(233, 233, 233, 0.50);
         backdrop-filter: blur(12.5px);
         width: 54%;
-        height: 25vw;
+        min-height: 25vw;
+        /* Set a minimum height based on viewport width for larger screens */
         top: 250px;
         left: 10%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* Two equal columns */
+        grid-template-rows: auto auto;
+        /* Automatically adjust row height */
+        gap: 20px;
+        max-width: 100%;
+        justify-items: center;
+        align-items: center;
     }
+
+    .subContainer {
+        /* Example background for visibility */
+        padding: 40px;
+        /* Optional border */
+        /* Optional shadow */
+        width: 100%;
+        /* Make each container span full available width */
+        max-width: 400px;
+        /* Max width for responsiveness */
+    }
+
+    h2 {
+        font-family: Koulen;
+        font-size: calc(2rem + 0.2vw);
+    }
+
+    .subText {
+        font-size: calc(0.1rem + 1vw);
+        line-height: normal;
+        font-weight: 400;
+        border-top: 2px solid rgb(0, 0, 0);
+        padding-top: 20px;
+    }
+
+
 
     h1 {
         position: absolute;
@@ -113,7 +149,7 @@
         font-weight: 400;
     }
 
-    p {
+    .text {
         position: absolute;
         top: 570px;
         left: 68%;
@@ -122,6 +158,7 @@
         width: 25%;
         line-height: normal;
         font-weight: 400;
+        border-top: 1px solid rgb(255, 255, 255);
     }
 
     .redLine {

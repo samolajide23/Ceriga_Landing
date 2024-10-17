@@ -14,8 +14,8 @@
     }
 
     h1 {
-        position: absolute;
-        top: 37%;
+        position: relative;
+        margin-top: 17vw;
         left: 12%;
         color: #fff;
         font-size: calc(2rem + 3vw);
@@ -26,8 +26,7 @@
     }
 
     p {
-        position: absolute;
-        top: 55%;
+        position: relative;
         left: 12%;
         color: #fff;
         font-size: calc(1rem + 0.1vw);
@@ -37,8 +36,8 @@
     }
 
     button {
-        position: absolute;
-        top: 64%;
+        position: relative;
+        margin-top: 2%;
         left: 12%;
         border-radius: 60px;
         background: #F00;
@@ -70,7 +69,7 @@
 
     #redline {
         position: absolute;
-        top: 364px;
+        top: 17.6vw;
         left: 11%;
         width: 2.5px;
         height: 146px;

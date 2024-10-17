@@ -13,7 +13,19 @@
                 document.getElementById("footer-placeholder").innerHTML = data;
             });
     });
+
+    // Hide loader when the page is fully loaded
+    // You can hide the loader after page load
+    window.addEventListener("load", function () {
+        const loader = document.getElementById('loader');
+        loader.style.display = 'none'; // Hide loader after page fully loads
+    });
 </script>
+
+<div class="loader-container" id="loader">
+    <div class="loader"></div>
+</div>
+
 
 <div id="header-placeholder"></div>
 
@@ -26,7 +38,7 @@
     <h1>EVERYTHING YOUR BRAND DESERVES<a style="color: red;">.</a></h1>
     <p>Ceriga simplifies your journey as a clothing brand by offering a platform that streamlines your entire
         ordering process.</p>
-    <div id="buttonGlow"></div>
+    <!-- <div id="buttonGlow"></div> -->
     <button><a id="getstarted" href="https://ceriga-devy.vercel.app/">GET STARTED</a></button>
 
     <div id="redline"></div>
