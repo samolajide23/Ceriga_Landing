@@ -1,6 +1,6 @@
 .first-paragraph {
     background-color: black;
-    height: 140vw;
+    padding-bottom: 100px;
     padding-top: 200px;
     margin: 0px auto;
     flex-shrink: 0;
@@ -19,7 +19,6 @@
 }
 
 .row {
-    position: absolute;
     display: flex;
     flex-wrap: wrap;
     width: 85%;
@@ -31,6 +30,7 @@
 
 /* Create four equal columns that sits next to each other */
 .column {
+    margin: 0 auto;
     flex: 23%;
     max-width: 23%;
 }
@@ -45,6 +45,7 @@
 .column2 {
     flex: 50%;
     max-width: 53%;
+    margin: 0 auto;
 }
 
 .column2 img {
@@ -57,17 +58,18 @@
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
     .column {
-        -ms-flex: 50%;
-        flex: 50%;
-        max-width: 50%;
+        -ms-flex: 60%;
+        flex: 60%;
+        max-width: 60%;
     }
-}
+    .column2 {
+        -ms-flex: 60%;
+        flex: 60%;
+        max-width: 60%;
+    }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .column {
-        -ms-flex: 100%;
-        flex: 100%;
-        max-width: 100%;
+    img{
+        width: 40%;
     }
+
 }
