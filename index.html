@@ -13,7 +13,19 @@
                 document.getElementById("footer-placeholder").innerHTML = data;
             });
     });
+
+    // Hide loader when the page is fully loaded
+    // You can hide the loader after page load
+    window.addEventListener("load", function () {
+        const loader = document.getElementById('loader');
+        loader.style.display = 'none'; // Hide loader after page fully loads
+    });
 </script>
+
+<div class="loader-container" id="loader">
+    <div class="loader"></div>
+</div>
+
 
 <div id="header-placeholder"></div>
 
@@ -26,10 +38,10 @@
     <h1>EVERYTHING YOUR BRAND DESERVES<a style="color: red;">.</a></h1>
     <p>Ceriga simplifies your journey as a clothing brand by offering a platform that streamlines your entire
         ordering process.</p>
-    <div id="buttonGlow"></div>
-    <button><a id="getstarted" href="https://ceriga-devy.vercel.app/">GET STARTED</a></button>
+    <!-- <div id="buttonGlow"></div> -->
+    <button><a id="getstarted" href="https://ceriga.co/studio">GET STARTED</a></button>
 
-    <div id="redline"></div>
+    <div id=" redline"></div>
 </section>
 
 <section class="ourService">
@@ -39,9 +51,9 @@
             measurement table, diverse color palettes, fabric selections, dye and fading preferences, as well as
             tailored packaging and delivery services. With Ceriga, every detail is crafted to fit your unique brand
             vision.</p>
-        <img class="img1" src="img/ourService1.jpg" />
-        <img class="img2" src="img/ourService2.jpg" />
-        <img class="img3" src="img/ourService3.jpg" />
+        <img class="img1" src="imgHome/ourService1.jpg" />
+        <img class="img2" src="imgHome/ourService2.jpg" />
+        <img class="img3" src="imgHome/ourService3.jpg" />
     </div>
 </section>
 
@@ -54,48 +66,23 @@
             <div class="color-box-small"></div>
             <div class="color-box">
                 <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="images/blank hoodie.png" /><a
-                    class="color-box-customize">Cusomize</a>
+                        Styles</a></div><img class="sellingimg" src="imgHome/blank_hoodie.png" /><a
+                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
             </div>
             <div class="color-box">
                 <div class="textcontainer"><a class="color-box-title">Zip Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="images/blank zip hoodie.png"><a
-                    class="color-box-customize">Cusomize</a>
+                        Styles</a></div><img class="sellingimg" src="imgHome/blank_ziphoodie.png"><a
+                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
             </div>
             <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="images/blank t shirt.png"><a
-                    class="color-box-customize">Cusomize</a>
+                <div class="textcontainer"><a class="color-box-title">Tshirt</a><br> <a class="color-box-style">2
+                        Styles</a></div><img class="sellingimg" src="imgHome/blank_tshirt.png"><a
+                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
             </div>
             <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="images/blank jogger.png"><a
-                    class="color-box-customize">Cusomize</a>
-            </div>
-            <div class="color-box-small"></div>
-        </div>
-
-        <div class="mySlides1">
-            <div class="color-box-small"></div>
-            <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="images/blank zip hoodie.png"><a
-                    class="color-box-customize">Cusomize</a>
-            </div>
-            <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="images/blank t shirt.png"><a
-                    class="color-box-customize">Cusomize</a>
-            </div>
-            <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="images/blank jogger.png"><a
-                    class="color-box-customize">Cusomize</a>
-            </div>
-            <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="images/blank hoodie.png" /><a
-                    class="color-box-customize">Cusomize</a>
+                <div class="textcontainer"><a class="color-box-title">Jogger</a><br> <a class="color-box-style">3
+                        Styles</a></div><img class="sellingimg" id="joggerImg" src="imgHome/blank_jogger.png"><a
+                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
             </div>
             <div class="color-box-small"></div>
         </div>
@@ -103,24 +90,24 @@
         <div class="mySlides1">
             <div class="color-box-small"></div>
             <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="images/blank t shirt.png"><a
-                    class="color-box-customize">Cusomize</a>
+                <div class="textcontainer"><a class="color-box-title">Zip Hoodie</a><br> <a class="color-box-style">3
+                        Styles</a></div><img class="sellingimg" src="imgHome/blank_ziphoodie.png"><a
+                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
+            </div>
+            <div class="color-box">
+                <div class="textcontainer"><a class="color-box-title">Tshirt</a><br> <a class="color-box-style">2
+                        Styles</a></div><img class="sellingimg" src="imgHome/blank_tshirt.png"><a
+                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
+            </div>
+            <div class="color-box">
+                <div class="textcontainer"><a class="color-box-title">Jogger</a><br> <a class="color-box-style">3
+                        Styles</a></div><img class="sellingimg" id="joggerImg" src="imgHome/blank_jogger.png"><a
+                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
             </div>
             <div class="color-box">
                 <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="images/blank jogger.png"><a
-                    class="color-box-customize">Cusomize</a>
-            </div>
-            <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="images/blank hoodie.png" /><a
-                    class="color-box-customize">Cusomize</a>
-            </div>
-            <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="images/blank zip hoodie.png"><a
-                    class="color-box-customize">Cusomize</a>
+                        Styles</a></div><img class="sellingimg" src="imgHome/blank_hoodie.png" /><a
+                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
             </div>
             <div class="color-box-small"></div>
         </div>
@@ -128,24 +115,50 @@
         <div class="mySlides1">
             <div class="color-box-small"></div>
             <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="images/blank jogger.png"><a
-                    class="color-box-customize">Cusomize</a>
+                <div class="textcontainer"><a class="color-box-title">Tshirt</a><br> <a class="color-box-style">2
+                        Styles</a></div><img class="sellingimg" src="imgHome/blank_tshirt.png"><a
+                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
+            </div>
+            <div class="color-box">
+                <div class="textcontainer"><a class="color-box-title">Jogger</a><br> <a class="color-box-style">3
+                        Styles</a></div><img class="sellingimg" id="joggerImg" src="imgHome/blank_jogger.png"><a
+                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
             </div>
             <div class="color-box">
                 <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="images/blank hoodie.png"><a
-                    class="color-box-customize">Cusomize</a>
+                        Styles</a></div><img class="sellingimg" src="imgHome/blank_hoodie.png" /><a
+                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
+            </div>
+            <div class="color-box">
+                <div class="textcontainer"><a class="color-box-title">Zip Hoodie</a><br> <a class="color-box-style">3
+                        Styles</a></div><img class="sellingimg" src="imgHome/blank_ziphoodie.png"><a
+                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
+            </div>
+            <div class="color-box-small"></div>
+        </div>
+
+        <div class="mySlides1">
+            <div class="color-box-small"></div>
+            <div class="color-box">
+                <div class="textcontainer"><a class="color-box-title">Jogger</a><br> <a class="color-box-style">3
+                        Styles</a></div><img class="sellingimg" id="joggerImg" src="imgHome/blank_jogger.png"><a
+                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
             </div>
             <div class="color-box">
                 <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="images/blank zip hoodie.png"><a
-                    class="color-box-customize">Cusomize</a>
+                        Styles</a></div><img class="sellingimg" src="imgHome/blank_hoodie.png" /><a
+                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
             </div>
             <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="images/blank t shirt.png"><a
-                    class="color-box-customize">Cusomize</a>
+                <div class="textcontainer"><a class="color-box-title">Zip Hoodie</a><br> <a class="color-box-style">3
+                        Styles</a></div><img class="sellingimg" src="imgHome/blank_ziphoodie.png"><a
+                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
+            </div>
+
+            <div class="color-box">
+                <div class="textcontainer"><a class="color-box-title">Tshirt</a><br> <a class="color-box-style">2
+                        Styles</a></div><img class="sellingimg" src="imgHome/blank_tshirt.png"><a
+                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
             </div>
             <div class="color-box-small"></div>
         </div>
@@ -155,14 +168,14 @@
 </section>
 
 <section class="aboutCeriga">
-    <img class="aboutImg" src="images/aboutCeriga.png" />
+    <img class="aboutImg" src="imgHome/aboutCeriga.png" />
     <div id="aboutContainer">
         <h1>ABOUT CERIGA<a style="color: red;">.</a></h1>
         <p>We provide a wide range of customization options through our innovative software, including an editable
             measurement table, diverse color palettes, fabric selections, dye and fading preferences, as well as
             tailored packaging and delivery services. With Ceriga, every detail is crafted to fit your unique brand
             vision.</p>
-        <button><a id="getstarted" href="https://ceriga-devy.vercel.app/">MORE INFO</a></button>
+        <button><a id="getstarted" href="aboutus.html">MORE INFO</a></button>
 
         <div id="buttonGlow"></div>
     </div>
@@ -173,18 +186,20 @@
     <p>Discover our best-selling products that have captured the attention of our customers and transformed their
         experiences.</p>
     <div class="gallery-images">
-        <img class="galleryimg" src="images/placeholder.png">
-        <img class="galleryimg" src="images/placeholder.png">
-        <img class="galleryimg" src="images/placeholder.png">
-    </div>
-    <h2 class="galleryimg">View More</h2>
+        <img class="galleryimg" src="imgHome/gallery1.png">
+        <img class="galleryimg" src="imgHome/gallery2.png">
+        <img class="galleryimg" src="imgHome/gallery3.png">
+    </div><a href="gallery.html">
+        <h2 class="galleryimg">View More<div id="chevron-arrow-left"></div>
+        </h2>
+    </a>
 </section>
 
 <section class="craftSomethingSpecial">
     <h1>TOGETHER, WE CAN CRAFT SOMETHING SPECIAL<a style="color: red;">.</a></h1>
     <div class="button-container">
-        <button><a id="getstarted" href="https://ceriga-devy.vercel.app/">GET STARTED</a></button>
-        <button class="contactusbutton"><a id="contactus" href="https://ceriga-devy.vercel.app/">CONTACT US</a></button>
+        <button><a id="getstarted" href="https://ceriga.co/studio">GET STARTED</a></button>
+        <button class="contactusbutton"><a id="contactus" href="contact.html">CONTACT US</a></button>
     </div>
     <p>Start designing your next collection today with our software.</P>
     <div id="buttonGlow1"></div>
