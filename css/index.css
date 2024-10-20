@@ -72,7 +72,7 @@
         top: 17.6vw;
         left: 11%;
         width: 2.5px;
-        height: 146px;
+        height: 8vw;
         border: 1px solid #F00;
         background-color: #F00;
     }
@@ -207,15 +207,23 @@
         text-decoration: none;
     }
 
+
+
     .sellingimg {
         width: 95%;
-        height: 25vw;
-        margin-top: 1vw;
+        height: 22vw;
+        margin-top: 3vw;
+    }
+
+    #hoodieImg {
+        width: 95%;
+        height: 21vw;
+        margin-top: 3vw;
     }
 
     #joggerImg {
         width: 50%;
-        height: 20vw;
+        height: 19vw;
         margin-top: 4vw;
     }
 
