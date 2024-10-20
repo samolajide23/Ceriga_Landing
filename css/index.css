@@ -359,12 +359,13 @@
         font-size: calc(2rem + 3vw);
         font-family: Koulen, sans-serif;
         margin-bottom: 10px;
+        line-height: 5vw;
     }
 
     p {
         font-size: calc(1rem + 0.1vw);
         max-width: 700px;
-        padding-bottom: 20px;
+        padding-bottom: 1.5vw;
         border-bottom: 1px solid #FFF;
     }
 

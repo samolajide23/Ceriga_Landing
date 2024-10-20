@@ -19,7 +19,7 @@
     .backgroundImage {
         position: absolute;
         width: 100%;
-        left:0;
+        left: 0;
     }
 
     p {
@@ -110,69 +110,47 @@
         /* Two equal columns */
         grid-template-rows: auto auto;
         /* Automatically adjust row height */
-        gap: 20px;
         max-width: 100%;
         justify-items: center;
         align-items: center;
     }
 
     .subContainer {
-        /* Example background for visibility */
-        padding: 40px;
-        /* Optional border */
-        /* Optional shadow */
-        width: 100%;
-        /* Make each container span full available width */
-        max-width: 400px;
-        /* Max width for responsiveness */
+        padding: 0px 10px 0px 110px;
+    }
+
+    .subContainer:nth-child(2) {
+        padding: 0px 0px 0px 70px;
+        /* Modify this padding as needed */
+    }
+
+    /* Target the third .subContainer */
+    .subContainer:nth-child(4) {
+        padding: 0px 0px 0px 70px;
     }
 
     h2 {
         font-family: Koulen;
-        font-size: calc(2rem + 0.2vw);
+        font-size: calc(1rem + .6vw);
     }
 
     .subText {
-        font-size: calc(0.1rem + 1vw);
+        font-size: 90%;
         line-height: normal;
         font-weight: 400;
-        border-top: 2px solid rgb(0, 0, 0);
+        border-top: 3px solid rgb(0, 0, 0);
         padding-top: 20px;
+        width: 75%;
     }
-
-    .subContainer {
-        /* Example background for visibility */
-        padding: 40px;
-        /* Optional border */
-        /* Optional shadow */
-        width: 100%;
-        /* Make each container span full available width */
-        max-width: 400px;
-        /* Max width for responsiveness */
-    }
-
-    h2 {
-        font-family: Koulen;
-        font-size: calc(2rem + 0.2vw);
-    }
-
-    .subText {
-        font-size: calc(0.1rem + 1vw);
-        line-height: normal;
-        font-weight: 400;
-        border-top: 2px solid rgb(0, 0, 0);
-        padding-top: 20px;
-    }
-
 
 
     h1 {
         position: absolute;
-        top: 250px;
+        top: 320px;
         left: 67%;
-        font-size: calc(2rem + 3vw);
+        font-size: calc(2rem + 2.5vw);
         font-family: Koulen;
-        width: 330px;
+        width: 300px;
         line-height: 1;
         font-weight: 400;
     }
@@ -181,9 +159,9 @@
         position: absolute;
         top: 570px;
         left: 68%;
-        font-size: calc(1rem + 0.2vw);
+        font-size: calc(1rem + 0.02vw);
         font-family: Roboto;
-        width: 25%;
+        width: 13%;
         line-height: normal;
         font-weight: 400;
         border-top: 1px solid rgb(255, 255, 255);
@@ -412,7 +390,7 @@
         font-size: 12px;
         font-family: Roboto;
         width: 365px;
-        line-height: 28px;
+        line-height: 16px;
         font-weight: 400;
         margin-top: 60px;
         text-align: center;
@@ -451,7 +429,7 @@
         color: #000;
     }
 
-    #buttonGlow1 {
+    #budttonGlow1 {
         position: relative;
         top: -165px;
         left: -140px;
