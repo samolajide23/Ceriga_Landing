@@ -1,24 +1,39 @@
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("header-placeholder").innerHTML = data;
-            });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("footer-placeholder").innerHTML = data;
-            });
-    });
+    // Load the header and footer asynchronously as before
+    async function loadHeaderAndFooter() {
+        const headerResponse = fetch('header.html');
+        const footerResponse = fetch('footer.html');
+        const [headerData, footerData] = await Promise.all([headerResponse, footerResponse]);
 
-    // Hide loader when the page is fully loaded
-    // You can hide the loader after page load
-    window.addEventListener("load", function () {
-        const loader = document.getElementById('loader');
-        loader.style.display = 'none'; // Hide loader after page fully loads
+        const headerText = await headerData.text();
+        const footerText = await footerData.text();
+
+        document.getElementById("header-placeholder").innerHTML = headerText;
+        document.getElementById("footer-placeholder").innerHTML = footerText;
+    }
+
+    // Minimum time for loader (e.g., 2 seconds)
+    const loaderMinTime = 1000; // 2 seconds
+
+    // Start the timer for the loader
+    const loaderTimer = new Promise(resolve => setTimeout(resolve, loaderMinTime));
+
+    // Function to hide loader and show content
+    function hideLoader() {
+        document.querySelector(".loader").classList.add("loader--hidden");
+        document.querySelector(".content").style.display = "block";
+    }
+
+    // When the window is fully loaded
+    window.addEventListener("load", async function () {
+        // Load the header and footer asynchronously
+        loadHeaderAndFooter();
+
+        // Wait for both the loader timer and the page to be fully loaded
+        await loaderTimer;
+
+        // Hide the loader and show the content
+        hideLoader();
     });
 </script>
 
@@ -26,188 +41,194 @@
     <div class="loader"></div>
 </div>
 
+<div class="content" style="display: none; background-color: black;">
 
-<div id="header-placeholder"></div>
+    <div id="header-placeholder"></div>
 
-<section class="everythingYourBrandDeserves">
-    <!-- Video Background -->
-    <video autoplay muted loop id="background-video">
-        <source src="https://videos.pexels.com/video-files/9092375/9092375-hd_1920_1080_30fps.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-    </video>
-    <h1>EVERYTHING YOUR BRAND DESERVES<a style="color: red;">.</a></h1>
-    <p>Ceriga simplifies your journey as a clothing brand by offering a platform that streamlines your entire
-        ordering process.</p>
-    <!-- <div id="buttonGlow"></div> -->
-    <button><a id="getstarted" href="https://ceriga.co/studio">GET STARTED</a></button>
-
-    <div id="redline"></div>
-</section>
-
-<section class="ourService">
-    <div class="container">
-        <h1>OUR SERVICE<a style="color: red;">.</a></h1>
-        <p>We provide a wide range of customization options through our innovative software, including an editable
-            measurement table, diverse color palettes, fabric selections, dye and fading preferences, as well as
-            tailored packaging and delivery services. With Ceriga, every detail is crafted to fit your unique brand
-            vision.</p>
-        <img class="img1" src="imgHome/ourService1.jpg" />
-        <img class="img2" src="imgHome/ourService2.jpg" />
-        <img class="img3" src="imgHome/ourService3.jpg" />
-    </div>
-</section>
-
-<section class="bestselling">
-    <h1>BEST SELLING<a style="color: red;">.</a></h1>
-    <p>Discover our best-selling products that have captured the attention of our customers and transformed their
-        experiences.</p>
-    <div class="slideshow-container">
-        <div class="mySlides1">
-            <div class="color-box-small"></div>
-            <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" id="hoodieImg" src="imgHome/blank_hoodie.png" /><a
-                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
-            </div>
-            <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Zip Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="imgHome/blank_ziphoodie.png"><a
-                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
-            </div>
-            <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Tshirt</a><br> <a class="color-box-style">2
-                        Styles</a></div><img class="sellingimg" src="imgHome/blank_tshirt.png"><a
-                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
-            </div>
-            <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Jogger</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" id="joggerImg" src="imgHome/blank_jogger.png"><a
-                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
-            </div>
-            <div class="color-box-small"></div>
-        </div>
-
-        <div class="mySlides1">
-            <div class="color-box-small"></div>
-            <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Zip Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="imgHome/blank_ziphoodie.png"><a
-                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
-            </div>
-            <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Tshirt</a><br> <a class="color-box-style">2
-                        Styles</a></div><img class="sellingimg" src="imgHome/blank_tshirt.png"><a
-                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
-            </div>
-            <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Jogger</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" id="joggerImg" src="imgHome/blank_jogger.png"><a
-                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
-            </div>
-            <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="imgHome/blank_hoodie.png" /><a
-                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
-            </div>
-            <div class="color-box-small"></div>
-        </div>
-
-        <div class="mySlides1">
-            <div class="color-box-small"></div>
-            <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Tshirt</a><br> <a class="color-box-style">2
-                        Styles</a></div><img class="sellingimg" src="imgHome/blank_tshirt.png"><a
-                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
-            </div>
-            <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Jogger</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" id="joggerImg" src="imgHome/blank_jogger.png"><a
-                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
-            </div>
-            <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="imgHome/blank_hoodie.png" /><a
-                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
-            </div>
-            <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Zip Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="imgHome/blank_ziphoodie.png"><a
-                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
-            </div>
-            <div class="color-box-small"></div>
-        </div>
-
-        <div class="mySlides1">
-            <div class="color-box-small"></div>
-            <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Jogger</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" id="joggerImg" src="imgHome/blank_jogger.png"><a
-                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
-            </div>
-            <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="imgHome/blank_hoodie.png" /><a
-                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
-            </div>
-            <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Zip Hoodie</a><br> <a class="color-box-style">3
-                        Styles</a></div><img class="sellingimg" src="imgHome/blank_ziphoodie.png"><a
-                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
-            </div>
-
-            <div class="color-box">
-                <div class="textcontainer"><a class="color-box-title">Tshirt</a><br> <a class="color-box-style">2
-                        Styles</a></div><img class="sellingimg" src="imgHome/blank_tshirt.png"><a
-                    class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
-            </div>
-            <div class="color-box-small"></div>
-        </div>
-        <a class="prev" onclick="plusSlides(-1)">&#x2190;</a>
-        <a class="next" onclick="plusSlides(1)">&#x2192;</a>
-    </div>
-</section>
-
-<section class="aboutCeriga">
-    <img class="aboutImg" src="imgHome/aboutCeriga.png" />
-    <div id="aboutContainer">
-        <h1>ABOUT CERIGA<a style="color: red;">.</a></h1>
-        <p>We provide a wide range of customization options through our innovative software, including an editable
-            measurement table, diverse color palettes, fabric selections, dye and fading preferences, as well as
-            tailored packaging and delivery services. With Ceriga, every detail is crafted to fit your unique brand
-            vision.</p>
-        <button><a id="getstarted" href="aboutus.html">MORE INFO</a></button>
-
-        <div id="buttonGlow"></div>
-    </div>
-</section>
-
-<section class="gallery">
-    <h1>GALLERY<a style="color: red;">.</a></h1>
-    <p>Discover our best-selling products that have captured the attention of our customers and transformed their
-        experiences.</p>
-    <div class="gallery-images">
-        <img class="galleryimg" src="imgHome/gallery1.png">
-        <img class="galleryimg" src="imgHome/gallery2.png">
-        <img class="galleryimg" src="imgHome/gallery3.png">
-    </div><a href="gallery.html">
-        <h2 class="galleryimg">View More<div id="chevron-arrow-left"></div>
-        </h2>
-    </a>
-</section>
-
-<section class="craftSomethingSpecial">
-    <h1>TOGETHER, WE CAN CRAFT SOMETHING SPECIAL<a style="color: red;">.</a></h1>
-    <div class="button-container">
+    <section class="everythingYourBrandDeserves">
+        <!-- Video Background -->
+        <video autoplay muted loop id="background-video">
+            <source src="https://videos.pexels.com/video-files/9092375/9092375-hd_1920_1080_30fps.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <h1>EVERYTHING YOUR BRAND DESERVES<a style="color: red;">.</a></h1>
+        <p>Ceriga simplifies your journey as a clothing brand by offering a platform that streamlines your entire
+            ordering process.</p>
+        <!-- <div id="buttonGlow"></div> -->
         <button><a id="getstarted" href="https://ceriga.co/studio">GET STARTED</a></button>
-        <button class="contactusbutton"><a id="contactus" href="contact.html">CONTACT US</a></button>
-    </div>
-    <p>Start designing your next collection today with our software.</P>
-    <div id="buttonGlow1"></div>
-    <div id="buttonGlow2"></div>
-</section>
 
-<div id="footer-placeholder"></div>
+        <div id="redline"></div>
+    </section>
 
+    <section class="ourService">
+        <div class="container">
+            <h1>OUR SERVICE<a style="color: red;">.</a></h1>
+            <p>We provide a wide range of customization options through our innovative software, including an editable
+                measurement table, diverse color palettes, fabric selections, dye and fading preferences, as well as
+                tailored packaging and delivery services. With Ceriga, every detail is crafted to fit your unique brand
+                vision.</p>
+            <img class="img1" src="imgHome/ourService1.jpg" />
+            <img class="img2" src="imgHome/ourService2.jpg" />
+            <img class="img3" src="imgHome/ourService3.jpg" />
+        </div>
+    </section>
+
+    <section class="bestselling">
+        <h1>BEST SELLING<a style="color: red;">.</a></h1>
+        <p>Discover our best-selling products that have captured the attention of our customers and transformed their
+            experiences.</p>
+        <div class="slideshow-container">
+            <div class="mySlides1">
+                <div class="color-box-small"></div>
+                <div class="color-box">
+                    <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
+                            Styles</a></div><img class="sellingimg" id="hoodieImg" src="imgHome/blank_hoodie.png" /><a
+                        class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
+                </div>
+                <div class="color-box">
+                    <div class="textcontainer"><a class="color-box-title">Zip Hoodie</a><br> <a
+                            class="color-box-style">3
+                            Styles</a></div><img class="sellingimg" src="imgHome/blank_ziphoodie.png"><a
+                        class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
+                </div>
+                <div class="color-box">
+                    <div class="textcontainer"><a class="color-box-title">Tshirt</a><br> <a class="color-box-style">2
+                            Styles</a></div><img class="sellingimg" src="imgHome/blank_tshirt.png"><a
+                        class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
+                </div>
+                <div class="color-box">
+                    <div class="textcontainer"><a class="color-box-title">Jogger</a><br> <a class="color-box-style">3
+                            Styles</a></div><img class="sellingimg" id="joggerImg" src="imgHome/blank_jogger.png"><a
+                        class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
+                </div>
+                <div class="color-box-small"></div>
+            </div>
+
+            <div class="mySlides1">
+                <div class="color-box-small"></div>
+                <div class="color-box">
+                    <div class="textcontainer"><a class="color-box-title">Zip Hoodie</a><br> <a
+                            class="color-box-style">3
+                            Styles</a></div><img class="sellingimg" src="imgHome/blank_ziphoodie.png"><a
+                        class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
+                </div>
+                <div class="color-box">
+                    <div class="textcontainer"><a class="color-box-title">Tshirt</a><br> <a class="color-box-style">2
+                            Styles</a></div><img class="sellingimg" src="imgHome/blank_tshirt.png"><a
+                        class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
+                </div>
+                <div class="color-box">
+                    <div class="textcontainer"><a class="color-box-title">Jogger</a><br> <a class="color-box-style">3
+                            Styles</a></div><img class="sellingimg" id="joggerImg" src="imgHome/blank_jogger.png"><a
+                        class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
+                </div>
+                <div class="color-box">
+                    <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
+                            Styles</a></div><img class="sellingimg" src="imgHome/blank_hoodie.png" /><a
+                        class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
+                </div>
+                <div class="color-box-small"></div>
+            </div>
+
+            <div class="mySlides1">
+                <div class="color-box-small"></div>
+                <div class="color-box">
+                    <div class="textcontainer"><a class="color-box-title">Tshirt</a><br> <a class="color-box-style">2
+                            Styles</a></div><img class="sellingimg" src="imgHome/blank_tshirt.png"><a
+                        class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
+                </div>
+                <div class="color-box">
+                    <div class="textcontainer"><a class="color-box-title">Jogger</a><br> <a class="color-box-style">3
+                            Styles</a></div><img class="sellingimg" id="joggerImg" src="imgHome/blank_jogger.png"><a
+                        class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
+                </div>
+                <div class="color-box">
+                    <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
+                            Styles</a></div><img class="sellingimg" src="imgHome/blank_hoodie.png" /><a
+                        class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
+                </div>
+                <div class="color-box">
+                    <div class="textcontainer"><a class="color-box-title">Zip Hoodie</a><br> <a
+                            class="color-box-style">3
+                            Styles</a></div><img class="sellingimg" src="imgHome/blank_ziphoodie.png"><a
+                        class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
+                </div>
+                <div class="color-box-small"></div>
+            </div>
+
+            <div class="mySlides1">
+                <div class="color-box-small"></div>
+                <div class="color-box">
+                    <div class="textcontainer"><a class="color-box-title">Jogger</a><br> <a class="color-box-style">3
+                            Styles</a></div><img class="sellingimg" id="joggerImg" src="imgHome/blank_jogger.png"><a
+                        class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
+                </div>
+                <div class="color-box">
+                    <div class="textcontainer"><a class="color-box-title">Hoodie</a><br> <a class="color-box-style">3
+                            Styles</a></div><img class="sellingimg" src="imgHome/blank_hoodie.png" /><a
+                        class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
+                </div>
+                <div class="color-box">
+                    <div class="textcontainer"><a class="color-box-title">Zip Hoodie</a><br> <a
+                            class="color-box-style">3
+                            Styles</a></div><img class="sellingimg" src="imgHome/blank_ziphoodie.png"><a
+                        class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
+                </div>
+
+                <div class="color-box">
+                    <div class="textcontainer"><a class="color-box-title">Tshirt</a><br> <a class="color-box-style">2
+                            Styles</a></div><img class="sellingimg" src="imgHome/blank_tshirt.png"><a
+                        class="color-box-customize" href="https://ceriga.co/studio">Customize</a>
+                </div>
+                <div class="color-box-small"></div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#x2190;</a>
+            <a class="next" onclick="plusSlides(1)">&#x2192;</a>
+        </div>
+    </section>
+
+    <section class="aboutCeriga">
+        <img class="aboutImg" src="imgHome/aboutCeriga.png" />
+        <div id="aboutContainer">
+            <h1>ABOUT CERIGA<a style="color: red;">.</a></h1>
+            <p>We provide a wide range of customization options through our innovative software, including an editable
+                measurement table, diverse color palettes, fabric selections, dye and fading preferences, as well as
+                tailored packaging and delivery services. With Ceriga, every detail is crafted to fit your unique brand
+                vision.</p>
+            <button><a id="getstarted" href="aboutus.html">MORE INFO</a></button>
+
+            <div id="buttonGlow"></div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <h1>GALLERY<a style="color: red;">.</a></h1>
+        <p>Discover our best-selling products that have captured the attention of our customers and transformed their
+            experiences.</p>
+        <div class="gallery-images">
+            <img class="galleryimg" src="imgHome/gallery1.png">
+            <img class="galleryimg" src="imgHome/gallery2.png">
+            <img class="galleryimg" src="imgHome/gallery3.png">
+        </div><a href="gallery.html">
+            <h2 class="galleryimg">View More<div id="chevron-arrow-left"></div>
+            </h2>
+        </a>
+    </section>
+
+    <section class="craftSomethingSpecial">
+        <h1>TOGETHER, WE CAN CRAFT SOMETHING SPECIAL<a style="color: red;">.</a></h1>
+        <div class="button-container">
+            <button><a id="getstarted" href="https://ceriga.co/studio">GET STARTED</a></button>
+            <button class="contactusbutton"><a id="contactus" href="contact.html">CONTACT US</a></button>
+        </div>
+        <p>Start designing your next collection today with our software.</P>
+        <div id="buttonGlow1"></div>
+        <div id="buttonGlow2"></div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+</div>
 <script>
     let slideIndex = 1;
     showSlides(slideIndex);

@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("header-placeholder").innerHTML = data;
-            });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("footer-placeholder").innerHTML = data;
-            });
+    // Load the header and footer asynchronously as before
+    async function loadHeaderAndFooter() {
+        const headerResponse = fetch('header.html');
+        const footerResponse = fetch('footer.html');
+        const [headerData, footerData] = await Promise.all([headerResponse, footerResponse]);
+
+        const headerText = await headerData.text();
+        const footerText = await footerData.text();
+
+        document.getElementById("header-placeholder").innerHTML = headerText;
+        document.getElementById("footer-placeholder").innerHTML = footerText;
+    }
+
+    // Minimum time for loader (e.g., 2 seconds)
+    const loaderMinTime = 1000; // 2 seconds
+
+    // Start the timer for the loader
+    const loaderTimer = new Promise(resolve => setTimeout(resolve, loaderMinTime));
+
+    // Function to hide loader and show content
+    function hideLoader() {
+        document.querySelector(".loader").classList.add("loader--hidden");
+        document.querySelector(".content").style.display = "block";
+    }
+
+    // When the window is fully loaded
+    window.addEventListener("load", async function () {
+        // Load the header and footer asynchronously
+        loadHeaderAndFooter();
+
+        // Wait for both the loader timer and the page to be fully loaded
+        await loaderTimer;
+
+        // Hide the loader and show the content
+        hideLoader();
     });
 
     // Add scroll event listener
@@ -29,154 +51,163 @@
         });
     });
 </script>
+<div class="loader-container" id="loader">
+    <div class="loader"></div>
+</div>
 
-<div id="header-placeholder"></div>
+<div class="content" style="display: none; background-color: black;">
 
-<section class="aboutUsCeriga">
-    <img class="backgroundImage" src="imgAboutUs/background.jpg">
-    <!--   <svg class="eclipse">
+    <div id="header-placeholder"></div>
+
+    <section class="aboutUsCeriga">
+        <img class="backgroundImage" src="imgAboutUs/background.jpg">
+        <!--   <svg class="eclipse">
         <circle cx="20vw" cy="20vw" r="16vw" stroke="#F00" stroke-width="1vw" fill="none" stroke-dasharray="2.5vw" />
     </svg>-->
-    <h1>ABOUT CERIGA<a style="color: red;">.</a></h1>
-    <p>At Ceriga, we’re a dynamic team of young entrepreneurs driven by a shared vision to <a
-            style="font-weight: 600;">revolutionize</a> the fashion industry. Recognizing a gap in the market, we set
-        out
-        to
-        bridge it with <a style="font-weight: 600;">creativity</a> and <a style="font-weight: 600;">innovation</a>.</p>
-</section>
+        <h1>ABOUT CERIGA<a style="color: red;">.</a></h1>
+        <p>At Ceriga, we’re a dynamic team of young entrepreneurs driven by a shared vision to <a
+                style="font-weight: 600;">revolutionize</a> the fashion industry. Recognizing a gap in the market, we
+            set
+            out
+            to
+            bridge it with <a style="font-weight: 600;">creativity</a> and <a style="font-weight: 600;">innovation</a>.
+        </p>
+    </section>
 
-<section class="ourStory">
-    <svg width="1200" height="1200" class="eclipse">
-        <circle cx="600" cy="600" r="21vw" stroke="#F00" stroke-width="230" fill="none" stroke-dasharray="4.6vw" />
-    </svg>
-    <h1>OUR STORY<a style="color: red;">.</a></h1>
-    <p>It all started in the summer of 2023 when the three of us decided to take on the fashion industry, we seen
-        first
-        hand the problems clothing brands were facing like miscommunication with manufacturers, unfair prices, long
-        processes and many more problems. we are passionate about the fashion industry and we're determined to make
-        a
-        real impact. Join us on this journey as we transform the industry together.
-    </p>
-    <div class="redLine"></div>
-    <div class="eclipdse"></div>
-</section>
+    <section class="ourStory">
+        <svg width="1200" height="1200" class="eclipse">
+            <circle cx="600" cy="600" r="21vw" stroke="#F00" stroke-width="230" fill="none" stroke-dasharray="4.6vw" />
+        </svg>
+        <h1>OUR STORY<a style="color: red;">.</a></h1>
+        <p>It all started in the summer of 2023 when the three of us decided to take on the fashion industry, we seen
+            first
+            hand the problems clothing brands were facing like miscommunication with manufacturers, unfair prices, long
+            processes and many more problems. we are passionate about the fashion industry and we're determined to make
+            a
+            real impact. Join us on this journey as we transform the industry together.
+        </p>
+        <div class="redLine"></div>
+        <div class="eclipdse"></div>
+    </section>
 
-<section class="ourPromiseToYou">
-    <svg width="1300" height="1300" class="eclipse">
-        <circle cx="650" cy="650" r="30vw" stroke="#F00" stroke-width="40" fill="none" stroke-dasharray="4.8vw" />
-    </svg>
-    <div class="container">
-        <div class="subContainer">
-            <h2>A SAFE PLACE</h2>
-            <p class="subText">We prioritize your safety, creating a secure environment where you can shop with
-                confidence.</p>
-        </div>
-        <div class="subContainer">
-            <h2>Keeping in Contact</h2>
-            <p class="subText">We're here for you, maintaining open communication and responding to your needs promptly.
-            </p>
-        </div>
-        <div class="subContainer">
-            <h2>At Your Convenience</h2>
-            <p class="subText">Your time is valuable, so we aim to provide services that fit seamlessly into your
-                schedule.</p>
-        </div>
-        <div class="subContainer">
-            <h2>Quality of Service</h2>
-            <p class="subText"> We hold ourselves to the highest standards, delivering top-quality products and
-                exceptional customer care.</p>
-        </div>
-    </div>
-    <h1>OUR PROMISE TO YOU<a style="color: red;">.</a></h1>
-    <p class="text">At Ceriga, we are dedicated to ensuring your experience with us is always positive and reliable.
-        Here is our
-        commitment to you.</p>
-    <div class="redLine"></div>
-</section>
-
-
-<section class="ourTeam">
-    <h1>OUR TEAM<a style="color: red;">.</a></h1>
-    <div class="img-container">
+    <section class="ourPromiseToYou">
+        <svg width="1300" height="1600" class="eclipse">
+            <circle cx="650" cy="800" r="30vw" stroke="#F00" stroke-width="40" fill="none" stroke-dasharray="4.8vw" />
+        </svg>
         <div class="container">
-            <img class="galleryimg" src="imgAboutUs/richyjames.jpg">
-            <h2>Richy James</h2>
-            <h3>Co Founder & CEO</h3>
+            <div class="subContainer">
+                <h2>A SAFE PLACE</h2>
+                <p class="subText">We prioritize your safety, creating a secure environment where you can shop with
+                    confidence.</p>
+            </div>
+            <div class="subContainer">
+                <h2>Keeping in Contact</h2>
+                <p class="subText">We're here for you, maintaining open communication and responding to your needs
+                    promptly.
+                </p>
+            </div>
+            <div class="subContainer">
+                <h2>At Your Convenience</h2>
+                <p class="subText">Your time is valuable, so we aim to provide services that fit seamlessly into your
+                    schedule.</p>
+            </div>
+            <div class="subContainer">
+                <h2>Quality of Service</h2>
+                <p class="subText"> We hold ourselves to the highest standards, delivering top-quality products and
+                    exceptional customer care.</p>
+            </div>
+        </div>
+        <h1>OUR PROMISE TO YOU<a style="color: red;">.</a></h1>
+        <p class="text">At Ceriga, we are dedicated to ensuring your experience with us is always positive and reliable.
+            Here is our
+            commitment to you.</p>
+        <div class="redLine"></div>
+    </section>
+
+
+    <section class="ourTeam">
+        <h1>OUR TEAM<a style="color: red;">.</a></h1>
+        <div class="img-container">
+            <div class="container">
+                <img class="galleryimg" src="imgAboutUs/richyjames.jpg">
+                <h2>Richy James</h2>
+                <h3>Co Founder & CEO</h3>
+            </div>
+            <div class="container">
+                <img class="galleryimg" src="imgAboutUs/samueleboda.jpg">
+                <h2>Samuel Eboda</h2>
+                <h3>Co Founder & CEO</h3>
+            </div>
+            <div class="container">
+                <img class="galleryimg" src="imgAboutUs/samuelolajide.jpg">
+                <h2>Samuel Olajide</h2>
+                <h3>Co Founder & COO</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="smallGallery">
+        <div class="row">
+            <div class="column">
+                <img src="imgAboutUs/gallery1.jpg" style="width:100%;height:13vw">
+                <img src="imgAboutUs/gallery4.jpg" style="width:100%;height:27vw">
+            </div>
+            <div class="column2">
+                <img src="imgAboutUs/gallery2.jpg" style="width:100%;height:29vw">
+                <img src="imgAboutUs/gallery5.jpg" style="width:100%;height:11vw">
+            </div>
+            <div class="column">
+                <img src="imgAboutUs/gallery3.jpg" style="width:100%;height:27vw">
+                <img src="imgAboutUs/gallery6.jpg" style="width:100%;height:13vw">
+            </div>
+        </div>
+    </section>
+
+    <section class="ourCoreValues">
+        <h1>OUR CORE VALUES<a style="color: red;">.</a></h1>
+        <div class="container">
+            <h2>Transparency</h2>
+            <p>We believe in open and honest communication, ensuring clarity in everything we do.</p>
+            <div class="redLine"></div>
         </div>
         <div class="container">
-            <img class="galleryimg" src="imgAboutUs/samueleboda.jpg">
-            <h2>Samuel Eboda</h2>
-            <h3>Co Founder & CEO</h3>
+            <h2>excellence</h2>
+            <p>We strive to exceed expectations by delivering outstanding products and services.</p>
+            <div class="redLine"></div>
         </div>
         <div class="container">
-            <img class="galleryimg" src="imgAboutUs/samuelolajide.jpg">
-            <h2>Samuel Olajide</h2>
-            <h3>Co Founder & COO</h3>
+            <h2>integrity</h2>
+            <p>We act with strong ethics, ensuring fairness and trust in every interaction.</p>
+            <div class="redLine"></div>
         </div>
-    </div>
-</section>
+        <div class="container">
+            <h2>respect</h2>
+            <p>We treat our customers, partners, and team members with the highest level of respect and care.</p>
+            <div class="redLine"></div>
+        </div>
+        <div class="container">
+            <h2>accountability</h2>
+            <p>We take ownership of our actions and are committed to delivering on our promises..</p>
+            <div class="redLine"></div>
+        </div>
+        <div class="container">
+            <h2>INNOVATION</h2>
+            <p>We embrace creativity and forward-thinking to constantly improve and lead in the fashion industry.</p>
+            <div class="redLine"></div>
+        </div>
+        <img src="images/female hoodie square 1.png">
+    </section>
 
-<section class="smallGallery">
-    <div class="row">
-        <div class="column">
-            <img src="imgAboutUs/gallery1.jpg" style="width:100%;height:13vw">
-            <img src="imgAboutUs/gallery4.jpg" style="width:100%;height:27vw">
+    <section class="solveYourProblems">
+        <h1>LET US SOLVE YOUR PROBLEMS<a style="color: red;">.</a></h1>
+        <div class="button-container">
+            <button><a id="getstarted" href="https://ceriga.co/studio">GET STARTED</a></button>
+            <button class="contactusbutton"><a id="contactus" href="contact.html">CONTACT US</a></button>
         </div>
-        <div class="column2">
-            <img src="imgAboutUs/gallery2.jpg" style="width:100%;height:29vw">
-            <img src="imgAboutUs/gallery5.jpg" style="width:100%;height:11vw">
-        </div>
-        <div class="column">
-            <img src="imgAboutUs/gallery3.jpg" style="width:100%;height:27vw">
-            <img src="imgAboutUs/gallery6.jpg" style="width:100%;height:13vw">
-        </div>
-    </div>
-</section>
-
-<section class="ourCoreValues">
-    <h1>OUR CORE VALUES<a style="color: red;">.</a></h1>
-    <div class="container">
-        <h2>Transparency</h2>
-        <p>We believe in open and honest communication, ensuring clarity in everything we do.</p>
-        <div class="redLine"></div>
-    </div>
-    <div class="container">
-        <h2>excellence</h2>
-        <p>We strive to exceed expectations by delivering outstanding products and services.</p>
-        <div class="redLine"></div>
-    </div>
-    <div class="container">
-        <h2>integrity</h2>
-        <p>We act with strong ethics, ensuring fairness and trust in every interaction.</p>
-        <div class="redLine"></div>
-    </div>
-    <div class="container">
-        <h2>respect</h2>
-        <p>We treat our customers, partners, and team members with the highest level of respect and care.</p>
-        <div class="redLine"></div>
-    </div>
-    <div class="container">
-        <h2>accountability</h2>
-        <p>We take ownership of our actions and are committed to delivering on our promises..</p>
-        <div class="redLine"></div>
-    </div>
-    <div class="container">
-        <h2>INNOVATION</h2>
-        <p>We embrace creativity and forward-thinking to constantly improve and lead in the fashion industry.</p>
-        <div class="redLine"></div>
-    </div>
-    <img src="images/female hoodie square 1.png">
-</section>
-
-<section class="solveYourProblems">
-    <h1>LET US SOLVE YOUR PROBLEMS<a style="color: red;">.</a></h1>
-    <div class="button-container">
-        <button><a id="getstarted" href="https://ceriga.co/studio">GET STARTED</a></button>
-        <button class="contactusbutton"><a id="contactus" href="contact.html">CONTACT US</a></button>
-    </div>
-    <p>Discover our best-selling products that have captured the attention of our customers and transformed their
-        experiences.</P>
-    <div id="buttonGlow1"></div>
-    <div id="buttonGlow2"></div>
-</section>
+        <p>Discover our best-selling products that have captured the attention of our customers and transformed their
+            experiences.</P>
+        <div id="buttonGlow1"></div>
+        <div id="buttonGlow2"></div>
+    </section>
+</div>
 <div id="footer-placeholder"></div>

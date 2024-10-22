@@ -1,57 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("header-placeholder").innerHTML = data;
-            });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("footer-placeholder").innerHTML = data;
-            });
-    });
+    // Load the header and footer asynchronously as before
+    async function loadHeaderAndFooter() {
+        const headerResponse = fetch('header.html');
+        const footerResponse = fetch('footer.html');
+        const [headerData, footerData] = await Promise.all([headerResponse, footerResponse]);
 
+        const headerText = await headerData.text();
+        const footerText = await footerData.text();
+
+        document.getElementById("header-placeholder").innerHTML = headerText;
+        document.getElementById("footer-placeholder").innerHTML = footerText;
+    }
+
+    // Minimum time for loader (e.g., 2 seconds)
+    const loaderMinTime = 1000; // 2 seconds
+
+    // Start the timer for the loader
+    const loaderTimer = new Promise(resolve => setTimeout(resolve, loaderMinTime));
+
+    // Function to hide loader and show content
+    function hideLoader() {
+        document.querySelector(".loader").classList.add("loader--hidden");
+        document.querySelector(".content").style.display = "block";
+    }
+
+    // When the window is fully loaded
+    window.addEventListener("load", async function () {
+        // Load the header and footer asynchronously
+        loadHeaderAndFooter();
+
+        // Wait for both the loader timer and the page to be fully loaded
+        await loaderTimer;
+
+        // Hide the loader and show the content
+        hideLoader();
+    });
 </script>
 
-<div id="header-placeholder"></div>
+<div class="loader-container" id="loader">
+    <div class="loader"></div>
+</div>
 
-<section class="first-paragraph">
-    <p class="first_h1">Welcome to our world of <span class="highlight-red">vibrant</span> collections and <span
-            class="highlight-red">memories</span>, where every piece tells a <span class="highlight-red">story</span>
-        and captures a moment in time. Explore, enjoy, and be <span class="highlight-red">inspired</span>.
-    </p>
+<div class="content" style="display: none; background-color: black;">
 
-    <div class="row">
-        <div class="column">
-            <img src="images/compressed-images/pexels-cottonbro-4614227.webp" style="width:100%;height:13vw ">
-            <img src="images/compressed-images/gallery2.jpg" style="width:100%;height:27vw">
-            <img src="images/compressed-images/pexels-nguyendesigner-5271312.webp" style="width:100%;height:13vw;">
-            <img src="images/compressed-images/pexels-tima-miroshnichenko-6765002.webp" style="width:100%;height:27vw">
-        </div>
-        <div class="column2">
-            <img src="images/compressed-images/pexels-taha-balta-3031128-13159721.webp" style="width:100%;height:29vw">
-            <img src="images/compressed-images/pexels-vlada-karpovich-4452511.webp" style="width:100%;height:11vw">
-            <img src="images/compressed-images/pexels-hson-27893064.webp" style="width:100%;height:29vw">
-            <img src="images/compressed-images/pexels-mandiri-abadi-396768996-15016522.webp"
-                style="width:100%;height:11vw">
-        </div>
-        <div class="column">
-            <img src="images/compressed-images/pexels-theplanetspeaks-9314012.webp" style="width:100%;height:27vw">
-            <img src="images/compressed-images/pexels-seyfidurmaz-6717035.webp" style="width:100%;height:13vw">
-            <img src="images/compressed-images/pexels-88107820-9983579.webp" style="width:100%;height:27vw">
-            <img src="images/compressed-images/pexels-michaela-st-3448542-20578931.webp" style="width:100%;height:13vw">
-        </div>
-    </div>
-    <div class="button-container">
-        <button><a id="getstarted" href="https://ceriga.co/studio">GET STARTED</a></button>
-        <button class="contactusbutton"><a id="contactus" href="contact.html">CONTACT US</a></button>
-    </div>
-    <h3>Start designing your next collection today with our software.</h3>
-</section>
+    <div id="header-placeholder"></div>
 
+    <section class="first-paragraph">
+        <p class="first_h1">Welcome to our world of <span class="highlight-red">vibrant</span> collections and <span
+                class="highlight-red">memories</span>, where every piece tells a <span
+                class="highlight-red">story</span>
+            and captures a moment in time. Explore, enjoy, and be <span class="highlight-red">inspired</span>.
+        </p>
+
+        <div class="row">
+            <div class="column">
+                <img src="images/compressed-images/pexels-cottonbro-4614227.webp" style="width:100%;height:13vw ">
+                <img src="images/compressed-images/gallery2.jpg" style="width:100%;height:27vw">
+                <img src="images/compressed-images/pexels-nguyendesigner-5271312.webp" style="width:100%;height:13vw;">
+                <img src="images/compressed-images/pexels-tima-miroshnichenko-6765002.webp"
+                    style="width:100%;height:27vw">
+            </div>
+            <div class="column2">
+                <img src="images/compressed-images/pexels-taha-balta-3031128-13159721.webp"
+                    style="width:100%;height:29vw">
+                <img src="images/compressed-images/pexels-vlada-karpovich-4452511.webp" style="width:100%;height:11vw">
+                <img src="images/compressed-images/pexels-hson-27893064.webp" style="width:100%;height:29vw">
+                <img src="images/compressed-images/pexels-mandiri-abadi-396768996-15016522.webp"
+                    style="width:100%;height:11vw">
+            </div>
+            <div class="column">
+                <img src="images/compressed-images/pexels-theplanetspeaks-9314012.webp" style="width:100%;height:27vw">
+                <img src="images/compressed-images/pexels-seyfidurmaz-6717035.webp" style="width:100%;height:13vw">
+                <img src="images/compressed-images/pexels-88107820-9983579.webp" style="width:100%;height:27vw">
+                <img src="images/compressed-images/pexels-michaela-st-3448542-20578931.webp"
+                    style="width:100%;height:13vw">
+            </div>
+        </div>
+        <div class="button-container">
+            <button><a id="getstarted" href="https://ceriga.co/studio">GET STARTED</a></button>
+            <button class="contactusbutton"><a id="contactus" href="contact.html">CONTACT US</a></button>
+        </div>
+        <h3>Start designing your next collection today with our software.</h3>
+    </section>
+</div>
 <div id="footer-placeholder"></div>

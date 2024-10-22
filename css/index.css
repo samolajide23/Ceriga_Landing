@@ -82,6 +82,7 @@
 .ourService {
     padding: 100px 5%;
     text-align: center;
+    background-color: white;
 
     h1 {
         font-size: calc(2rem + 3vw);
@@ -127,6 +128,7 @@
 .bestselling {
     padding: 300px 5%;
     text-align: center;
+    background-color: white;
 
     h1 {
         font-size: calc(2rem + 3vw);
@@ -276,7 +278,8 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    padding: -100px 0% 0% 0%;
+    padding-bottom: 100px;
+    background-color: white;
 
     .aboutImg {
         width: 100%;
