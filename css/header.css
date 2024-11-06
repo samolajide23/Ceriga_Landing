@@ -1,7 +1,10 @@
 @import url("index.css");
 @import url("aboutus.css");
 @import url("gallery.css");
+@import url("contact.css");
+@import url("policies.css");
 @import url("footer.css");
+
 
 
 * {
@@ -15,6 +18,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+    background-color: rgba(0, 0, 0);
 }
 
 header {

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    // Load the header and footer asynchronously as before
+    async function loadHeaderAndFooter() {
+        const headerResponse = fetch('header.html');
+        const footerResponse = fetch('footer.html');
+        const [headerData, footerData] = await Promise.all([headerResponse, footerResponse]);
+
+        const headerText = await headerData.text();
+        const footerText = await footerData.text();
+
+        document.getElementById("header-placeholder").innerHTML = headerText;
+        document.getElementById("footer-placeholder").innerHTML = footerText;
+    }
+
+    // Minimum time for loader (e.g., 2 seconds)
+    const loaderMinTime = 1000; // 2 seconds
+
+    // Start the timer for the loader
+    const loaderTimer = new Promise(resolve => setTimeout(resolve, loaderMinTime));
+
+    // Function to hide loader and show content
+    function hideLoader() {
+        document.querySelector(".loader").classList.add("loader--hidden");
+        document.querySelector(".content").style.display = "block";
+    }
+
+    // When the window is fully loaded
+    window.addEventListener("load", async function () {
+        // Load the header and footer asynchronously
+        loadHeaderAndFooter();
+
+        // Wait for both the loader timer and the page to be fully loaded
+        await loaderTimer;
+
+        // Hide the loader and show the content
+        hideLoader();
+    });
+
+    // Add scroll event listener
+    window.addEventListener("scroll", function () {
+        // Calculate rotation angle based on scroll position
+        let scrollPosition = window.scrollY;
+        let rotationAngle = scrollPosition * 0.1;
+
+        // Select all circles and apply rotation
+        document.querySelectorAll('.eclipse circle').forEach(circle => {
+            circle.style.transform = `rotate(${rotationAngle}deg)`;
+            circle.style.transformOrigin = "50% 50%";
+        });
+    });
+</script>
+<div class="loader-container" id="loader">
+    <div class="loader"></div>
+</div>
+
+<div class="content" style="display: none; background-color: black;">
+
+    <div id="header-placeholder"></div>
+
+    <section class="contactForm">
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key" value="b72bb919-a892-4889-badc-9758e10f9668">
+
+            <h1>Contact Us<a style="color: red;">.</a></h1>
+
+            <label for="fname">Full Name</label>
+            <input type="text" id="fname" name="fullName" placeholder="" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="" required>
+
+
+            <label for="cname">Company Name</label>
+            <input type="text" id="cname" name="companyName" placeholder="">
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="userInput" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+
+        </form>
+</div>
+</section>
+
+</div>
+<div id="footer-placeholder"></div>

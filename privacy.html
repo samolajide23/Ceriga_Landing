@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    // Load the header and footer asynchronously as before
+    async function loadHeaderAndFooter() {
+        const headerResponse = fetch('header.html');
+        const footerResponse = fetch('footer.html');
+        const [headerData, footerData] = await Promise.all([headerResponse, footerResponse]);
+
+        const headerText = await headerData.text();
+        const footerText = await footerData.text();
+
+        document.getElementById("header-placeholder").innerHTML = headerText;
+        document.getElementById("footer-placeholder").innerHTML = footerText;
+    }
+
+    // Minimum time for loader (e.g., 2 seconds)
+    const loaderMinTime = 1000; // 2 seconds
+
+    // Start the timer for the loader
+    const loaderTimer = new Promise(resolve => setTimeout(resolve, loaderMinTime));
+
+    // Function to hide loader and show content
+    function hideLoader() {
+        document.querySelector(".loader").classList.add("loader--hidden");
+        document.querySelector(".content").style.display = "block";
+    }
+
+    // When the window is fully loaded
+    window.addEventListener("load", async function () {
+        // Load the header and footer asynchronously
+        loadHeaderAndFooter();
+
+        // Wait for both the loader timer and the page to be fully loaded
+        await loaderTimer;
+
+        // Hide the loader and show the content
+        hideLoader();
+    });
+
+    // Add scroll event listener
+    window.addEventListener("scroll", function () {
+        // Calculate rotation angle based on scroll position
+        let scrollPosition = window.scrollY;
+        let rotationAngle = scrollPosition * 0.1;
+
+        // Select all circles and apply rotation
+        document.querySelectorAll('.eclipse circle').forEach(circle => {
+            circle.style.transform = `rotate(${rotationAngle}deg)`;
+            circle.style.transformOrigin = "50% 50%";
+        });
+    });
+</script>
+<div class="loader-container" id="loader">
+    <div class="loader"></div>
+</div>
+
+<div class="content" style="display: none; background-color: black;">
+    <div id="header-placeholder"></div>
+
+    <section class="privacy-policy">
+        <h1>Privacy Policy</h1>
+        <p>Effective Date: 06-Nov-2024 <br> Last Updated: 06-Nov-2024</p>
+
+        &nbsp;
+        <h5>Introduction</h5>
+        <div class="privacy-policy-p">
+            <p>This Privacy Policy explains how we collect, use, and protect your personal information when you visit
+                our website. By using this website, you agree to the terms outlined in this policy.</p>
+        </div>
+
+        &nbsp;
+        <h5>Information We Collect</h5>
+        <div class="privacy-policy-p">
+            <p>We collect the following types of information:</p>
+            <ul>
+                <li><strong>Personal Information:</strong> This includes your name, email address, phone number, and
+                    other personal details that you provide when you fill out forms on our website.</li>
+                <li><strong>Usage Data:</strong> We collect data on how you interact with our website, such as pages
+                    visited, time spent, and your browsing activity.</li>
+                <li><strong>Cookies:</strong> As outlined in our Cookie Policy, we use cookies to collect data about
+                    your interaction with our website.</li>
+            </ul>
+        </div>
+
+        &nbsp;
+        <h5>How We Use Your Information</h5>
+        <div class="privacy-policy-p">
+            <p>The information we collect is used to:</p>
+            <ul>
+                <li>Provide, improve, and personalize our services</li>
+                <li>Analyze user activity to improve website functionality and performance</li>
+                <li>Communicate with you regarding your inquiries or services</li>
+                <li>Comply with legal obligations and protect our rights</li>
+            </ul>
+        </div>
+
+        &nbsp;
+        <h5>How We Protect Your Information</h5>
+        <div class="privacy-policy-p">
+            <p>We take reasonable precautions to protect your personal data from unauthorized access, loss, or misuse.
+                However, no data transmission over the internet or method of electronic storage can be guaranteed to be
+                100% secure. We cannot guarantee the absolute security of your information.</p>
+        </div>
+
+        &nbsp;
+        <h5>Sharing Your Information</h5>
+        <div class="privacy-policy-p">
+            <p>We may share your personal data with third parties in the following situations:</p>
+            <ul>
+                <li>With service providers who assist us in operating our website and delivering services to you.</li>
+                <li>When required by law, regulation, or legal process.</li>
+                <li>In connection with a business transaction, such as a merger, acquisition, or sale of assets.</li>
+            </ul>
+        </div>
+
+        &nbsp;
+        <h5>Your Data Protection Rights</h5>
+        <div class="privacy-policy-p">
+            <p>You have the right to:</p>
+            <ul>
+                <li>Access, update, or delete your personal information.</li>
+                <li>Object to or restrict the processing of your personal data.</li>
+                <li>Withdraw your consent at any time (if we process your data based on consent).</li>
+                <li>Request a copy of your personal data in a commonly used, machine-readable format.</li>
+            </ul>
+            <p>If you wish to exercise any of these rights, please contact us at info@ceriga.co.</p>
+        </div>
+
+        &nbsp;
+        <h5>Cookies and Tracking Technologies</h5>
+        <div class="privacy-policy-p">
+            <p>As explained in our <a href="cookies.html">Cookie Policy</a>, we use cookies and other tracking
+                technologies to enhance your browsing experience and analyze website performance. You can manage your
+                cookie preferences by visiting the cookie settings page.</p>
+        </div>
+
+        &nbsp;
+        <h5>Third-Party Links</h5>
+        <div class="privacy-policy-p">
+            <p>Our website may contain links to third-party websites that are not under our control. We are not
+                responsible for the privacy practices or content of these websites. We encourage you to review the
+                privacy policies of any third-party sites you visit.</p>
+        </div>
+
+        &nbsp;
+        <h5>Changes to This Privacy Policy</h5>
+        <div class="privacy-policy-p">
+            <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an
+                updated "Effective Date." We encourage you to review this policy periodically to stay informed about how
+                we protect your information.</p>
+        </div>
+
+        &nbsp;
+        <h5>Contact Us</h5>
+        <div class="privacy-policy-p">
+            <p>If you have any questions about this Privacy Policy or how we handle your personal information, please
+                contact us at info@ceriga.co.</p>
+        </div>
+
+    </section>
+</div>
+<div id="footer-placeholder"></div>

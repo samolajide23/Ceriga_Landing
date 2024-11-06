@@ -1,0 +1,38 @@
+.cookies {
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    margin-top: 8vh;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 5vw;
+    padding-right: 10vw;
+    font-size: 120%;
+    line-height: 180%;
+}
+
+.privacy-policy{
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    margin-top: 8vh;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 5vw;
+    padding-right: 10vw;
+    font-size: 120%;
+    line-height: 180%;
+}
+
+.terms-conditions{
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    margin-top: 8vh;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 5vw;
+    padding-right: 10vw;
+    font-size: 120%;
+    line-height: 180%;
+}
