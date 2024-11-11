@@ -150,6 +150,7 @@ header .container {
         width: 100vw;
         display: none;
         flex-direction: column;
+        padding-bottom: 20px;
         position: absolute;
         top: 55px;
         right: 0%;
@@ -157,7 +158,12 @@ header .container {
         color: black;
 
         button {
-            width: 80vw;
+            position: relative;
+            width: 90vw;
+            height: 45px;
+            right: -5vw;
+            color: white;
+
         }
 
     }
