@@ -13,6 +13,7 @@
     box-sizing: border-box;
     font-weight: 500;
     scroll-behavior: smooth;
+    overflow: hidden;
 }
 
 body {
