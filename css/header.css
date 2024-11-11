@@ -157,17 +157,24 @@ header .container {
 
         button {
             width: 80vw;
-
         }
+
+    }
+
+
+    #logo {
+        margin-left: 6vw;
     }
 
     .nav-links a {
         position: relative;
         color: black;
-        font-size: 26px;
+        font-size: 22px;
         display: block;
         width: 80vw;
         left: 0vw;
+        background-color: #F00;
+        padding-left: 20px;
     }
 
     .nav-links.active {
