@@ -143,23 +143,41 @@ header .container {
 }
 
 /* Mobile Styles */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .nav-links {
+        width: 100vw;
         display: none;
         flex-direction: column;
         position: absolute;
         top: 55px;
-        right: 5%;
-        background-color: rgba(0, 0, 0, 0.9);
-        border-radius: 8px;
-        padding: 20px;
+        right: 0%;
+        background-color: rgba(255, 255, 255);
+        color: black;
+
+        button {
+            width: 80vw;
+            
+        }
+    }
+
+    .nav-links a {
+        position: relative;
+        color: black;
+        font-size: 26px;
+        display: block;
+        width: 80vw;
+        left:0vw;
     }
 
     .nav-links.active {
         display: flex;
+        color: black;
     }
 
     .burger-menu {
         display: flex;
+        left: 32vw;
+        position: relative;
     }
+
 }
