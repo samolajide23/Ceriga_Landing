@@ -160,9 +160,11 @@ header .container {
 
         button {
             position: relative;
-            width: 89vw;
+            padding-left: 0.5vw;
+            padding-right: 90vw;
             height: 45px;
             right: -5vw;
+
             border-radius: 60px 0px 0px 60px;
         }
 
@@ -171,7 +173,7 @@ header .container {
     #login{
         position: relative;
         color: white;
-        margin-left:-35vw;
+        right:-3vw;
     }
 
     #logo {
