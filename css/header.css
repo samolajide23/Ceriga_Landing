@@ -150,6 +150,7 @@ header .container {
         width: 100vw;
         display: none;
         flex-direction: column;
+        padding-top: 5px;
         padding-bottom: 20px;
         position: absolute;
         top: 55px;
@@ -159,15 +160,19 @@ header .container {
 
         button {
             position: relative;
-            width: 90vw;
+            width: 89vw;
             height: 45px;
             right: -5vw;
-            color: white;
-
+            border-radius: 60px 0px 0px 60px;
         }
 
     }
 
+    #login{
+        position: relative;
+        color: white;
+        margin-left:-35vw;
+    }
 
     #logo {
         margin-left: 3vw;
@@ -179,7 +184,7 @@ header .container {
         font-size: 22px;
         display: block;
         width: 80vw;
-        left: 0vw;
+        left: 2vw;
         padding-left: 20px;
     }
 
