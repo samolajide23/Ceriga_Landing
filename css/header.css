@@ -20,6 +20,7 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: rgba(0, 0, 0);
     max-width: 100%;
+    overflow-x: hidden;
 }
 
 header {
@@ -173,7 +174,6 @@ header .container {
         display: block;
         width: 80vw;
         left: 0vw;
-        background-color: #F00;
         padding-left: 20px;
     }
 
@@ -184,7 +184,7 @@ header .container {
 
     .burger-menu {
         display: flex;
-        left: 33vw;
+        left: 30vw;
         position: relative;
     }
 
