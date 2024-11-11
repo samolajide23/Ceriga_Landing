@@ -10,6 +10,15 @@
 
         document.getElementById("header-placeholder").innerHTML = headerText;
         document.getElementById("footer-placeholder").innerHTML = footerText;
+
+        // Define the toggleMenu function once header content is loaded
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Add event listener to the burger menu after the header is loaded
+        document.querySelector('.burger-menu').onclick = toggleMenu;
     }
 
     // Minimum time for loader (e.g., 2 seconds)
@@ -35,6 +44,8 @@
         // Hide the loader and show the content
         hideLoader();
     });
+
+
 </script>
 
 <div class="loader-container" id="loader">
