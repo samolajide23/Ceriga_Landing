@@ -1,7 +1,6 @@
 .everythingYourBrandDeserves {
     position: relative;
     height: 100vh;
-    overflow: hidden;
 
     video {
         position: absolute;
@@ -83,7 +82,6 @@
     padding: 100px 5%;
     text-align: center;
     background-color: white;
-    overflow: hidden;
 
     h1 {
         font-size: calc(2rem + 3vw);
@@ -130,7 +128,6 @@
     padding: 300px 5%;
     text-align: center;
     background-color: white;
-    overflow: hidden;
 
     h1 {
         font-size: calc(2rem + 3vw);
@@ -282,7 +279,6 @@
     align-items: center;
     padding-bottom: 100px;
     background-color: white;
-    overflow: hidden;
 
     .aboutImg {
         width: 100%;
@@ -360,7 +356,6 @@
     color: #FFF;
     margin-top: 150px;
     padding: 100px 10%;
-    overflow: hidden;
 
     h1 {
         font-size: calc(2rem + 3vw);
@@ -421,7 +416,6 @@
     color: white;
     padding: 200px 5%;
     text-align: center;
-    overflow: hidden;
 
     h1 {
         font-family: Koulen;
