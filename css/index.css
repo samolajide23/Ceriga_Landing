@@ -20,7 +20,6 @@
         color: #fff;
         font-size: calc(2rem + 3vw);
         font-family: Koulen, sans-serif;
-        width: 37%;
         line-height: 1;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
@@ -77,15 +76,31 @@
         border: 1px solid #F00;
         background-color: #F00;
     }
+}
 
-
-    @media (max-width : 768px) {
+.everythingYourBrandDeserves {
+    @media (max-width : 900px) {
         video {
-            height: 50%;
-
+            height: 100%;
         }
+
         h1 {
-            font-size: 9rem;
+            top: 30vw;
+            font-size: 12vw;
+        }
+        p{
+            font-size: 3vw;
+            top: 40vw;
+            width:80vw;
+        }
+
+        button {
+            top: 50vw;
+            font-size: 3vw;
+        }
+         ,
+        #redline {
+            display: none;
         }
     }
 }
