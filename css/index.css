@@ -2,6 +2,7 @@
     position: relative;
     height: 100vh;
 
+
     video {
         position: absolute;
         top: 0;
@@ -14,7 +15,7 @@
 
     h1 {
         position: relative;
-        margin-top: 17vw;
+        top: 17vw;
         left: 12%;
         color: #fff;
         font-size: calc(2rem + 3vw);
@@ -27,6 +28,7 @@
     p {
         position: relative;
         left: 12%;
+        top: 17vw;
         color: #fff;
         font-size: calc(1rem + 0.1vw);
         font-family: Roboto, sans-serif;
@@ -36,7 +38,7 @@
 
     button {
         position: relative;
-        margin-top: 2%;
+        top: 18vw;
         left: 12%;
         border-radius: 60px;
         background: #F00;
@@ -76,6 +78,16 @@
         background-color: #F00;
     }
 
+
+    @media (max-width : 768px) {
+        video {
+            height: 50%;
+
+        }
+        h1 {
+            font-size: 9rem;
+        }
+    }
 }
 
 .ourService {
