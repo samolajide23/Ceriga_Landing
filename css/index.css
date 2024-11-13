@@ -76,34 +76,34 @@
         border: 1px solid #F00;
         background-color: #F00;
     }
-}
 
-.everythingYourBrandDeserves {
     @media (max-width : 900px) {
         video {
             height: 100%;
         }
 
         h1 {
-            top: 30vw;
+            top: 40vw;
             font-size: 12vw;
         }
-        p{
+
+        p {
             font-size: 3vw;
             top: 40vw;
-            width:80vw;
+            width: 80vw;
         }
 
         button {
-            top: 50vw;
+            top: 45vw;
             font-size: 3vw;
         }
-         ,
+
         #redline {
             display: none;
         }
     }
 }
+
 
 .ourService {
     padding: 100px 5%;
@@ -148,6 +148,35 @@
         margin-top: 20.5%;
         margin-left: -14%;
         width: 22%;
+    }
+
+    @media (max-width : 900px) {
+
+        h1 {
+            top: -10vw;
+            font-size: 12vw;
+        }
+
+        p {
+            font-size: 3vw;
+            top: 40vw;
+            max-width: 80vw;
+        }
+
+
+        .img1 {
+            margin-top: 10vw;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .img2 {
+            display: none;
+        }
+
+        .img3 {
+            display: none;
+        }
     }
 }
 
@@ -296,6 +325,7 @@
         color: white;
     }
 
+    @media (max-width : 900px) {}
 
 }
 
@@ -315,7 +345,6 @@
     }
 
     #aboutContainer {
-
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -376,6 +405,39 @@
         text-decoration: none;
         letter-spacing: 0.7px;
     }
+
+
+    @media (max-width : 900px) {
+        .aboutImg {
+            max-width: 100%;
+            border-radius: 0px;
+        }
+
+        #aboutContainer {
+            width: 90vw;
+            text-align: center;
+            margin-left: 5vw;
+        }
+
+        h1 {
+            font-size: 12vw;
+            width: 100%;
+        }
+
+        p {
+            font-size: 3vw;
+            width: 100%;
+
+        }
+
+        button {
+            position: relative;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
+        }
+    }
+
 }
 
 .gallery {
@@ -436,6 +498,9 @@
         margin-left: 10%;
         margin-bottom: 2%;
     }
+
+
+    @media (max-width : 900px) {}
 }
 
 .craftSomethingSpecial {
@@ -516,4 +581,7 @@
         cursor: pointer;
         z-index: -1;
     }
+
+
+    @media (max-width : 900px) {}
 }

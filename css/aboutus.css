@@ -2,7 +2,7 @@
 .aboutUsCeriga {
     width: 100%;
     position: relative;
-    height: 97vh;
+    height: 97%;
     text-align: center;
     background-color: white;
     overflow: hidden;
@@ -54,7 +54,7 @@
 
     h1 {
         position: relative;
-        top: 350px;
+        top: 35%;
         left: 10%;
         font-size: 200px;
         font-family: Koulen;
@@ -65,7 +65,7 @@
 
     p {
         position: absolute;
-        top: 170px;
+        top: 10vw;
         left: 38%;
         font-size: 20px;
         font-family: Roboto;
@@ -76,7 +76,7 @@
 
     .redLine {
         position: absolute;
-        top: 170px;
+        top: 10vw;
         left: 37%;
         width: 2.5px;
         height: 214px;
@@ -90,6 +90,16 @@
         right: -700px;
     }
 
+    @media (max-width : 900px) {
+        h1 {
+            font-size: 200px;
+
+        }
+
+        .eclipse {
+            display: block;
+        }
+    }
 }
 
 .ourPromiseToYou {
@@ -186,6 +196,12 @@
         position: absolute;
         top: -100px;
         left: -30%;
+    }
+
+    @media (max-width : 900px) {
+        .eclipse {
+            display: none;
+        }
     }
 }
 

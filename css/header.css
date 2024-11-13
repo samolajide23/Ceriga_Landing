@@ -144,7 +144,7 @@ header .container {
 }
 
 /* Mobile Styles */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .nav-links {
         width: 100vw;
         display: none;
