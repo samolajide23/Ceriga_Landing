@@ -2,7 +2,7 @@
 .aboutUsCeriga {
     width: 100%;
     position: relative;
-    height: 97%;
+    height: 97vh;
     text-align: center;
     background-color: white;
     overflow: hidden;
@@ -21,6 +21,7 @@
     .backgroundImage {
         position: absolute;
         width: 100%;
+        height: 100%;
         left: 0;
     }
 
@@ -43,14 +44,41 @@
         height: 100vh;
     }
 
+    @media screen and (max-width: 900px) {
+
+        .backgroundImage {
+            width: 250%;
+            left: 0;
+        }
+
+        h1 {
+            font-size: 20vw;
+            width: 50vw;
+            text-align: center;
+            top: 200px;
+        }
+
+        p {
+            font-size: 5vw;
+            width: 80vw;
+            top: -20px;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .aboutUsCeriga {
+        height: 90vh;
+    }
 }
 
 .ourStory {
     max-width: 100vw;
     position: relative;
-    height: 100vh;
-    background-color: #FFF;
+    height: 130vh;
+    background-color: #ffffff;
     overflow: hidden;
+    z-index: 99;
 
     h1 {
         position: relative;
@@ -61,6 +89,7 @@
         width: 650px;
         line-height: 170px;
         font-weight: 400;
+        z-index: 99;
     }
 
     p {
@@ -71,7 +100,8 @@
         font-family: Roboto;
         width: 467px;
         line-height: normal;
-        font-weight: 400;
+        font-weight: 00;
+        z-index: 99;
     }
 
     .redLine {
@@ -86,19 +116,66 @@
 
     .eclipse {
         position: absolute;
-        top: -250px;
-        right: -700px;
+        top: -100px;
+        right: -55vw;
+        z-index: 99;
     }
 
-    @media (max-width : 900px) {
-        h1 {
-            font-size: 200px;
+    .eclipse-large {
+        display: block;
+    }
 
+    .eclipse-small {
+        display: none;
+    }
+
+    @media screen and (max-width: 1250px) {
+        .eclipse {
+            top: -100px;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+
+        h1 {
+            font-size: 30vw;
+            line-height: 1;
+            left: 5%;
+            top: 60vw;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 3.5vw;
+            width: 80vw;
+            left: 10%;
+        }
+
+        .redLine {
+            position: absolute;
+            top: 12vw;
+            left: 8%;
+            width: 2.5px;
+            height: 38vw;
         }
 
         .eclipse {
+            top: -100px;
+        }
+
+        .eclipse-large {
+            display: none;
+        }
+
+        .eclipse-small {
             display: block;
         }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .ourStory {
+        height: 90vh;
     }
 }
 
@@ -106,7 +183,7 @@
     width: 100%;
     position: relative;
     height: 100vh;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     overflow: hidden;
 
     .container {
@@ -116,9 +193,10 @@
         background: rgba(233, 233, 233, 0.50);
         backdrop-filter: blur(12.5px);
         width: 54%;
-        min-height: 25vw;
+        min-height: 40%;
+        padding: 20px;
         /* Set a minimum height based on viewport width for larger screens */
-        top: 250px;
+        top: 300px;
         left: 10%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -131,17 +209,17 @@
     }
 
     .subContainer {
-        padding: 0px 10px 0px 110px;
+        padding: 0px 10px 0px 13%;
     }
 
     .subContainer:nth-child(2) {
-        padding: 0px 0px 0px 70px;
+        padding: 0px 0px 0px 7%;
         /* Modify this padding as needed */
     }
 
     /* Target the third .subContainer */
     .subContainer:nth-child(4) {
-        padding: 0px 0px 0px 70px;
+        padding: 0px 0px 0px 7%;
     }
 
     h2 {
@@ -160,23 +238,27 @@
 
 
     h1 {
-        position: absolute;
-        top: 320px;
+        position: relative;
+        top: -50px;
         left: 67%;
-        font-size: calc(2rem + 2.5vw);
+        font-size: 4rem;
         font-family: Koulen;
-        width: 300px;
+        width: 14vw;
         line-height: 1;
         font-weight: 400;
+
+        @media screen and (max-width: 1200px) {
+            width: 19vw;
+        }
     }
 
     .text {
-        position: absolute;
-        top: 570px;
+        position: relative;
+        top: -40px;
         left: 68%;
-        font-size: calc(1rem + 0.02vw);
+        font-size: 1rem;
         font-family: Roboto;
-        width: 13%;
+        width: 200px;
         line-height: normal;
         font-weight: 400;
         border-top: 1px solid rgb(255, 255, 255);
@@ -184,10 +266,10 @@
 
     .redLine {
         position: absolute;
-        top: 572px;
+        top: 57%;
         left: 67%;
         width: 3px;
-        height: 70px;
+        height: 100px;
         border: 1px solid #F00;
         background-color: #F00;
     }
@@ -199,17 +281,80 @@
     }
 
     @media (max-width : 900px) {
+
+        .container {
+            width: 80%;
+            top: 30vw;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: auto;
+        }
+
+        .subContainer {
+            width: 90%;
+        }
+
+        .subContainer {
+            padding: 0;
+            padding-top: 20px;
+        }
+
+        .subContainer:nth-child(2) {
+            padding: 0;
+            padding-top: 20px;
+            /* Modify this padding as needed */
+        }
+
+        /* Target the third .subContainer */
+        .subContainer:nth-child(4) {
+            padding: 0;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 5vw;
+        }
+
+        .subText {
+            font-size: 3vw;
+            width: 100%;
+            padding-top: 2px;
+        }
+
+        h1 {
+            position: absolute;
+            font-size: 13vw;
+            top: 0px;
+            width: 100%;
+            left: 0;
+            text-align: center;
+        }
+
         .eclipse {
             display: none;
         }
+
+        .text {
+            display: none;
+        }
+
+        .redLine {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .ourPromiseToYou {
+        height: 160vw;
     }
 }
 
 #ourTeam {
     width: 100%;
     position: relative;
-    height: 130vh;
-    background-color: white;
+    padding-bottom: 100px;
+    background-color: rgb(201, 139, 139);
     overflow: hidden;
 
 
@@ -219,7 +364,7 @@
         top: 200px;
         font-size: 78px;
         font-family: Koulen;
-        width: 530px;
+        width: 100%;
         line-height: 100px;
         font-weight: 400;
         margin: 0 auto;
@@ -266,92 +411,120 @@
         /* 143.75% */
     }
 
+    @media screen and (max-width: 900px) {
+        h1 {
+            top: 10vw;
+        }
+
+        .container {
+            height: 100vw;
+            width: 80%;
+            margin-top: 100px;
+        }
+
+        img {
+            height: 100vw;
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    #ourTeam {
+        height: 420vw;
+    }
 }
 
 .smallGallery {
     width: 100%;
-    height: 100vh;
+    padding: 50px 0;
     background-color: white;
     overflow: hidden;
-
-    .row {
-        position: absolute;
-        display: flex;
-        flex-wrap: wrap;
-        width: 85%;
-        left: 0;
-        right: 0;
-        margin: 100px auto;
-        gap: 1.5%;
-    }
-
-    /* Create four equal columns that sits next to each other */
-    .column {
-        flex: 23%;
-        max-width: 23%;
-    }
-
-    .column img {
-        margin-bottom: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
-    }
-
-    .column2 {
-        flex: 50%;
-        max-width: 53%;
-    }
-
-    .column2 img {
-        margin-bottom: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
-    }
-
-    /* Responsive layout - makes a two column-layout instead of four columns */
-    @media screen and (max-width: 800px) {
-        .column {
-            -ms-flex: 50%;
-            flex: 50%;
-            max-width: 50%;
-        }
-    }
-
-    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 600px) {
-        .column {
-            -ms-flex: 100%;
-            flex: 100%;
-            max-width: 100%;
-        }
-    }
 }
 
-.ourCoreValues {
-    background-color: white;
+.smallGallery .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5%;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.smallGallery .column,
+.smallGallery .column2 {
+    flex: 1 1 23%;
+    max-width: 23%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.smallGallery .column2 {
+    flex: 1 1 50%;
+    max-width: 50%;
+}
+
+.smallGallery .column img,
+.smallGallery .column2 img {
     width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+    object-fit: cover;
+}
+
+/* Medium screens: Adjust to two-column layout */
+@media screen and (max-width: 900px) {
+
+    .smallGallery .column,
+    .smallGallery .column2 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .smallGallery .row {
+        gap: 10px;
+    }
+
+}
+
+
+.ourCoreValues {
+    background-color: rgb(182, 98, 98);
+    width: 100vw;
     position: relative;
-    height: 190vh;
+    height: 90vw;
     margin: 0 auto;
     overflow: hidden;
+
+    @media screen and (max-width: 900px) {
+        height: 800px;
+
+    }
 
     h1 {
         text-align: center;
         position: relative;
-        top: 250px;
+        top: 25q0px;
         font-size: 96px;
         font-family: Koulen;
-        width: 530px;
+        width: 100%;
         line-height: 1;
         margin: 0 auto;
+
+        @media screen and (max-width: 1100px) {
+            top: 25vw;
+
+        }
     }
 
     .container {
         position: relative;
         float: left;
-        margin-left: 7%;
-        margin-right: 0%;
-        width: 42%;
+        margin-left: 5vw;
+        margin-right: 0vw;
+        width: 40vw;
         margin-top: 28vw;
         margin-bottom: -23vw;
         display: flex;
@@ -363,24 +536,27 @@
         text-align: right;
         float: right;
         align-items: flex-end;
-        margin-left: 0%;
-        margin-right: 7%;
-        width: 42%;
+        margin-left: 0vw;
+        margin-right: 5vw;
     }
 
 
     h2 {
         font-size: 25px;
         font-family: Koulen;
-        width: 30%;
     }
 
 
     p {
         font-size: 14px;
-        width: 45%;
+        width: 40%;
         padding-bottom: 3%;
         border-bottom: 1.5px solid #f00;
+
+        @media screen and (max-width: 950px) {
+            width: 44vw;
+            font-size: 13px;
+        }
     }
 
 
@@ -390,6 +566,10 @@
         left: 0;
         right: 0;
         margin: 200px auto;
+
+        @media screen and (max-width: 950px) {
+            display: none;
+        }
     }
 }
 
@@ -404,15 +584,19 @@
     text-align: center;
     overflow: hidden;
 
+    @media screen and (max-width: 900px) {
+        height: 700px;
+    }
+
     h1 {
         text-align: center;
-        font-size: 130px;
+        font-size: calc(3rem + 3vw);
         font-family: Koulen;
         width: 814px;
         font-style: normal;
         font-weight: 400;
-        line-height: 120px;
-        margin-top: -100px;
+        line-height: 1;
+        padding-top: 100px;
     }
 
     p {
@@ -428,7 +612,7 @@
     .button-container {
         display: flex;
         /* Enables flexbox for buttons */
-        gap: 130px;
+        gap: 8vw;
         /* Adds space between buttons */
         margin-top: 50px;
     }
