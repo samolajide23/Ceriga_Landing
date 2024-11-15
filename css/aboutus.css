@@ -354,7 +354,7 @@
     width: 100%;
     position: relative;
     padding-bottom: 100px;
-    background-color: rgb(201, 139, 139);
+    background-color: rgb(255, 255, 255);
     overflow: hidden;
 
 
@@ -491,7 +491,7 @@
 
 
 .ourCoreValues {
-    background-color: rgb(182, 98, 98);
+    background-color: rgb(255, 255, 255);
     width: 100vw;
     position: relative;
     height: 90vw;
