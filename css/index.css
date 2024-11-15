@@ -184,6 +184,11 @@
     text-align: center;
     background-color: white;
 
+    @media screen and (max-width: 900px) {
+        display: none;
+
+    }
+
     h1 {
         font-size: calc(2rem + 3vw);
         font-family: Koulen, sans-serif;
@@ -470,6 +475,7 @@
         max-width: 32%;
         height: 30vw;
         margin: 30px 1% -20px 0px;
+
         @media screen and (max-width: 900px) {
             max-width: 100%;
             height: 90vw;
